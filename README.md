@@ -25,8 +25,10 @@ An enterprise-grade, state-of-the-art AI-powered Mock Interview system developed
 
 ---
 
-## 📽️ Demo Video
-> 🎬 **Demo Video Link**: [Insert YouTube or Google Drive Link Here]
+## 📽️ Live Deployment & Demo
+- 🌐 **Cosmic Frontend Client (Vercel)**: [https://stepsai-smoky.vercel.app](https://stepsai-smoky.vercel.app)
+- 🧠 **FastAPI Backend Service (Render)**: [https://stepsai-backend.onrender.com](https://stepsai-backend.onrender.com)
+- 🩺 **API Live Health Probe**: [https://stepsai-backend.onrender.com/health](https://stepsai-backend.onrender.com/health)
 
 ---
 
