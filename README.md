@@ -84,7 +84,7 @@ The pipeline consists of four key phases:
 
 - [x] **Full REST API scaffolding** with automated OpenAPI docs (/docs)
 - [x] **Modular enterprise layout** decoupling configurations, routing, models, and services
-- [ ] **Resume Intelligence**: Fast PDF parsing and structured JSON profiling (Phase 2)
+- [x] **Resume Intelligence**: Fast PDF parsing and structured JSON profiling (Phase 2)
 - [ ] **Conversational Recruiter**: Interactive AI role-play with custom follow-ups (Phase 3)
 - [ ] **Rubric Grading & PDF Export**: Detailed performance sheets with visual scores (Phase 4)
 - [ ] **Docker containerization & structured logs** (Phase 5)

@@ -8,8 +8,8 @@ This file tracks the status, goals, and technological stacks utilized across eac
 
 | Phase | Description | Status | Target Date / Time |
 | :--- | :--- | :---: | :---: |
-| [Phase 1](#phase-1--scaffold-everything-current-phase) | Project Scaffolding & FastAPI Skeleton | **IN PROGRESS** | Day 1 |
-| [Phase 2](#phase-2--resume-intelligence) | Resume Intelligence & Structured Extraction | *PENDING* | Day 2 |
+| [Phase 1](#phase-1--scaffold-everything-completed) | Project Scaffolding & FastAPI Skeleton | **✅ COMPLETED** | Day 1 |
+| [Phase 2](#phase-2--resume-intelligence-completed) | Resume Intelligence & Structured Extraction | **✅ COMPLETED** | Day 2 |
 | [Phase 3](#phase-3--the-interview-engine) | Conversational Mock Interview Engine | *PENDING* | Day 3-4 |
 | [Phase 4](#phase-4--evaluation-and-feedback) | Scoring, Rubrics & PDF Report Generator | *PENDING* | Day 5 |
 | [Phase 5](#phase-5--integration-and-polish) | Error Handling, Logging & Containerization | *PENDING* | Day 6 |
@@ -19,25 +19,26 @@ This file tracks the status, goals, and technological stacks utilized across eac
 
 ## 🔍 Phase Details
 
-### Phase 1 — Scaffold Everything (Current Phase)
-* **Status**: 🛠️ **In Progress / Scaffolding complete, running checks**
-* **Goals**:
-  - Establish a clean, professional, enterprise-grade directory structure for a Python backend.
+### Phase 1 — Scaffold Everything (Completed)
+* **Status**: ✅ **Completed**
+* **Goals Achieved**:
+  - Established a clean, professional, enterprise-grade directory structure for a Python backend.
   - Setup core settings management using `pydantic-settings` to handle environmental inputs.
-  - Implement a basic REST controller `/health` to verify system health, runtime parameters, and config bindings.
-  - Deliver initial files required for Day 1 evaluator visibility (`.env.example`, `requirements.txt`, `.gitignore`, `README.md`, `PHASES.md`).
+  - Implemented a basic REST controller `/health` to verify system health, runtime parameters, and config bindings.
+  - Delivered initial files required for Day 1 evaluator visibility (`.env.example`, `requirements.txt`, `.gitignore`, `README.md`, `PHASES.md`).
 * **Tech Stack**: Python 3.10+, FastAPI, Pydantic Settings, Pytest.
 * **Services / Libraries**: Uvicorn.
 
 ---
 
-### Phase 2 — Resume Intelligence
-* **Status**: ⏳ *Pending (Awaiting Phase 1 Approval)*
-* **Goals**:
-  - Enable PDF uploads through FastAPI `UploadFile` endpoint.
-  - Implement extremely high-performance text extraction from resumes using `PyMuPDF` (fitz).
-  - Feed extracted raw content to Claude 3.5 Sonnet using fine-tuned prompt structures requesting response outputs matching a strict JSON schema.
-  - Parse resume intelligence into Pydantic models containing: estimated job role, skill matching lists, estimated experience tier, and key career bullet summaries.
+### Phase 2 — Resume Intelligence (Completed)
+* **Status**: ✅ **Completed**
+* **Goals Achieved**:
+  - Enabled PDF uploads through FastAPI `/api/v1/resume/upload` endpoint taking `UploadFile` payloads.
+  - Integrated high-performance text extraction from resumes using `PyMuPDF` (`fitz`).
+  - Implemented standard `LLMService` wrapper leveraging Anthropic's **Tool Use (Function Calling)** to enforce deterministic JSON outputs.
+  - Parsed resume intelligence into type-safe Pydantic models containing candidates name, email, phone, links, estimated role, career seniority tier, technologies, education, and career key strengths.
+  - Created solid mock unit tests inside `app/tests/test_resume.py` to prevent logic regressions.
 * **Tech Stack**: FastAPI, PyMuPDF (fitz), Pydantic validation, Anthropic Claude 3.5.
 * **Services / Libraries**: official `anthropic` SDK.
 
