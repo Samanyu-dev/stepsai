@@ -7,27 +7,25 @@ client = TestClient(app)
 
 def test_upload_resume_invalid_format():
     """
-    Assert that the resume upload API returns a 400 bad request 
-    when the uploaded file is not a PDF.
+    Asserts that the upload endpoint rejects unsupported file structures with a 400.
     """
     response = client.post(
         "/api/v1/resume/upload",
-        files={"file": ("resume.txt", b"Mock non-pdf content", "text/plain")}
+        files={"file": ("resume.txt", b"my plain resume content", "text/plain")}
     )
     assert response.status_code == 400
-    assert "PDF format" in response.json()["detail"]
+    assert "Unsupported document format" in response.json()["detail"]
 
-@patch("app.api.v1.resume.extract_text_from_pdf")
+@patch("app.api.v1.resume.extract_text_from_file")
 @patch("app.api.v1.resume.llm_service.parse_resume")
-def test_upload_resume_success(mock_parse, mock_extract):
+def test_upload_resume_and_retrieval_flow(mock_parse, mock_extract):
     """
-    Assert that a successful PDF upload drives PyMuPDF text decoding
-    and Anthropic Claude profile synthesis correctly.
+    Asserts that uploading a valid document decodes raw text, compiles profiles
+    via Groq llama-3.3, stores it, and GET /resume/{session_id} retrieves it correctly.
     """
-    # 1. Mock PyMuPDF extraction returning raw string
+    # 1. Mock parsed output
     mock_extract.return_value = "Jane Doe \n Software Engineer \n skills: Python, Go"
     
-    # 2. Mock LLM Service returning validated ResumeProfile
     mock_profile = ResumeProfile(
         candidate_name="Jane Doe",
         email="jane.doe@example.com",
@@ -36,29 +34,39 @@ def test_upload_resume_success(mock_parse, mock_extract):
         github="https://github.com/janedoe",
         estimated_job_role="Backend Developer",
         experience_level="Senior",
-        skills=["Python", "Go", "FastAPI", "SQL"],
-        work_experience_summaries=["Senior Developer at Techcorp (3 years)"],
-        education_summaries=["B.Sc. in Computer Science"],
-        key_strengths=["System Design", "Highly Scalable APIs"]
+        skills=["Python", "Go", "FastAPI"],
+        work_experience_summaries=["Senior Developer at Techcorp"],
+        education_summaries=["B.Sc. in CS"],
+        key_strengths=["System Design"]
     )
     mock_parse.return_value = mock_profile
     
-    # 3. Trigger mock POST request
-    response = client.post(
+    # 2. Fire upload POST
+    upload_response = client.post(
         "/api/v1/resume/upload",
-        files={"file": ("resume.pdf", b"%PDF-1.4 dummy binary content", "application/pdf")}
+        files={"file": ("resume.pdf", b"%PDF-1.4 dummy pdf bytes", "application/pdf")}
     )
     
-    # 4. Assert responses
-    assert response.status_code == 200
+    assert upload_response.status_code == 200
+    upload_data = upload_response.json()
+    assert "session_id" in upload_data
+    session_id = upload_data["session_id"]
+    assert upload_data["profile"]["candidate_name"] == "Jane Doe"
     
-    data = response.json()
-    assert data["candidate_name"] == "Jane Doe"
-    assert data["estimated_job_role"] == "Backend Developer"
-    assert data["experience_level"] == "Senior"
-    assert "Go" in data["skills"]
-    assert "System Design" in data["key_strengths"]
+    # 3. Fire retrieval GET
+    get_response = client.get(f"/api/v1/resume/{session_id}")
+    assert get_response.status_code == 200
+    get_data = get_response.json()
+    assert get_data["candidate_name"] == "Jane Doe"
+    assert get_data["estimated_job_role"] == "Backend Developer"
+    assert "FastAPI" in get_data["skills"]
     
-    # Verify exact call structures
     mock_extract.assert_called_once()
     mock_parse.assert_called_once_with("Jane Doe \n Software Engineer \n skills: Python, Go")
+
+def test_get_parsed_resume_not_found():
+    """
+    Asserts that querying a non-existent resume session returns 404.
+    """
+    response = client.get("/api/v1/resume/non-existent-uuid-string")
+    assert response.status_code == 404

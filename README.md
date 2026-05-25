@@ -2,10 +2,11 @@
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![Claude](https://img.shields.io/badge/Claude%203.5-D97706?style=for-the-badge&logo=anthropic&logoColor=white)](https://www.anthropic.com)
+[![Groq](https://img.shields.io/badge/Groq%20API-f55a2a?style=for-the-badge&logo=fastapi&logoColor=white)](https://groq.com)
+[![Llama-3.3](https://img.shields.io/badge/Llama%203.3%2070B-blue?style=for-the-badge)](https://meta.ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-An advanced, enterprise-grade AI-powered Mock Interview system developed for the **Steps AI National-Level Online Hackathon 2026**. The platform automates candidate assessments by analyzing resumes, carrying out a context-aware conversational mock interview, and providing automated multi-dimensional grading reports.
+An advanced, enterprise-grade AI-powered Mock Interview system developed for the **Steps AI National-Level Online Hackathon 2026**. The platform automates candidate assessments by analyzing resumes, carrying out a context-aware conversational mock interview with real-time SSE streaming, and providing automated multi-dimensional grading reports.
 
 ---
 
@@ -13,9 +14,9 @@ An advanced, enterprise-grade AI-powered Mock Interview system developed for the
 
 ### **Problem Statement 2: AI Mock Interview Platform**
 > Develop an intelligent mock interview system that:
-> 1. Analyzes uploaded resumes.
-> 2. Conducts personalized, conversational interviews.
-> 3. Generates role-based questions.
+> 1. Analyzes uploaded resumes (PDF & DOCX).
+> 2. Conducts personalized, conversational interviews with streaming answers.
+> 3. Generates role-based questions (HR, Technical, Behavioral).
 > 4. Evaluates candidate responses.
 > 5. Provides comprehensive feedback and improvement suggestions.
 > 
@@ -31,8 +32,9 @@ An advanced, enterprise-grade AI-powered Mock Interview system developed for the
 ## 🛠️ Tech Stack Used
 
 - **Core Framework**: [FastAPI](https://fastapi.tiangolo.com/) (High-performance Python Web Framework)
-- **Generative AI & LLM Engine**: [Anthropic Claude 3.5 Sonnet](https://www.anthropic.com/) (Via official `anthropic` SDK)
+- **Generative AI & LLM Engine**: [Groq llama-3.3-70b-versatile](https://console.groq.com/) (Free Tier, ultra-low latency)
 - **PDF Extraction**: [PyMuPDF / fitz](https://pymupdf.readthedocs.io/) (Ultra-fast PDF text parsing)
+- **DOCX Extraction**: [python-docx](https://python-docx.readthedocs.io/) (Structured Word Document parsing)
 - **Data Validation & Settings**: [Pydantic V2 & Pydantic-Settings](https://docs.pydantic.dev/)
 - **Testing Suite**: [Pytest](https://docs.pytest.org/) & [HTTPX](https://www.python-httpx.org/) (Async testing)
 - **Process Manager / Server**: [Uvicorn](https://www.uvicorn.org/)
@@ -49,19 +51,20 @@ graph TD
     FastAPI -->|Routing| Routers[API Routers: app/api]
     
     subgraph "Core Business Services"
-        Routers -->|Parse PDF| Parser[Resume Parser Service]
+        Routers -->|Parse PDF/DOCX| Parser[Resume Parser Service]
         Routers -->|Manage Conversation| Engine[Interview Engine Service]
         Routers -->|Analyze Responses| Evaluator[Evaluation Service]
     end
     
     subgraph "Integrations & State"
         Parser -->|Raw Context| LLMService[LLM Service Interface]
-        Engine -->|Prompt Template / Chat| LLMService
+        Engine -->|Prompt Template / SSE Chat| LLMService
         Evaluator -->|Rubric Analysis| LLMService
         
-        LLMService -->|API Call| Claude[Claude 3.5 Sonnet / LLM]
+        LLMService -->|API Call| Groq[Groq Llama 3.3 70B / LLM]
         
-        Engine -->|Save/Restore Session| Store[In-Memory Session Store]
+        Parser -->|Cache Profile| ResumeStore[In-Memory Resume Store]
+        Engine -->|Save/Restore Session| Store[In-Memory Interview Store]
     end
     
     FastAPI -->|Config Injection| Settings[Pydantic Settings]
@@ -73,9 +76,9 @@ graph TD
 
 The pipeline consists of four key phases:
 
-1. **Resume Ingestion**: The candidate uploads their resume (PDF). `PyMuPDF` extracts the raw text. It is passed to Claude with structured instructions, returning a clean, validated JSON schema containing skills, experiences, and estimated job roles.
-2. **Contextual Questioning**: Based on the candidate's resume analysis, the engine creates custom behavioral, HR, and technical questions.
-3. **Conversational Engine**: A multi-turn conversation tracker stores messages and simulates an actual recruiter, adapting questions according to the candidate's answers.
+1. **Resume Ingestion & Caching**: The candidate uploads their resume (PDF or DOCX). `PyMuPDF` or `python-docx` extracts the raw text. It is passed to Groq llama-3.3 using JSON Mode, returning a clean, validated JSON schema containing skills, experiences, and estimated job roles. This profile is stored in an in-memory session cache mapped to a unique `session_id`.
+2. **Personalized Session Launch**: The candidate starts the mock interview via `/interview/start` selecting a mode (`HR`, `Technical`, `Behavioral`) and difficulty level. The engine retrieves their parsed resume from the session cache and returns the first question (Q1).
+3. **SSE Streaming Conversation**: Candidate responses are submitted to `/interview/answer`. The engine retrieves history, invokes Groq, and yields recruiter follow-ups and next questions in real-time using Server-Sent Events (`text/event-stream`).
 4. **Multi-Dimensional Grading**: Individual answers are graded (1-10) for clarity, technical depth, and relevance. A compiled PDF report outlines gaps and growth areas.
 
 ---
@@ -84,8 +87,9 @@ The pipeline consists of four key phases:
 
 - [x] **Full REST API scaffolding** with automated OpenAPI docs (/docs)
 - [x] **Modular enterprise layout** decoupling configurations, routing, models, and services
-- [x] **Resume Intelligence**: Fast PDF parsing and structured JSON profiling (Phase 2)
-- [ ] **Conversational Recruiter**: Interactive AI role-play with custom follow-ups (Phase 3)
+- [x] **Resume Intelligence**: Multi-format PDF and Word DOCX parsing and structured Groq JSON profiling (Phase 2)
+- [x] **Resume Session Stores**: Cache parsed candidate details in-memory, retrievable via GET `/resume/{session_id}` (Phase 2)
+- [x] **Conversational Recruiter SSE Stream**: Multi-turn dialogue with real-time SSE streaming, supporting HR, Technical, and Behavioral modes across Junior, Mid, and Senior difficulty levels (Phase 3)
 - [ ] **Rubric Grading & PDF Export**: Detailed performance sheets with visual scores (Phase 4)
 - [ ] **Docker containerization & structured logs** (Phase 5)
 
@@ -102,14 +106,14 @@ Create a `.env` file in the root directory based on `.env.example`:
 | `HOST` | String | Network address to bind the server | `0.0.0.0` |
 | `PORT` | Integer | System port to open for the server | `8000` |
 | `LOG_LEVEL` | String | Verbosity of terminal output (`info`, `debug`, etc.) | `info` |
-| `ANTHROPIC_API_KEY` | String | API credential key from Anthropic Console | *Required for interview engine* |
+| `GROQ_API_KEY` | String | API credential key from Groq Console | *Required for all LLM operations* |
 
 ---
 
 ## 🚀 Setup Instructions to Run Locally
 
 ### 1. Prerequisites
-- Python 3.10 or higher
+- Python 3.11 or higher
 - Git
 
 ### 2. Installation Steps
@@ -122,7 +126,7 @@ Create a `.env` file in the root directory based on `.env.example`:
 
 2. **Create a Virtual Environment**:
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -135,7 +139,7 @@ Create a `.env` file in the root directory based on `.env.example`:
 4. **Setup Environment**:
    ```bash
    cp .env.example .env
-   # Open .env and insert your ANTHROPIC_API_KEY
+   # Open .env and insert your GROQ_API_KEY
    ```
 
 5. **Start the Application**:

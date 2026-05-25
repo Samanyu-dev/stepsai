@@ -12,10 +12,9 @@ class Settings(BaseSettings):
     PORT: int = 8000
     LOG_LEVEL: str = "info"
     
-    # LLM Keys
-    # Note: Anthropic key is the default choice for the Claude interviewer engine
-    ANTHROPIC_API_KEY: str = Field(default="", validation_alias="ANTHROPIC_API_KEY")
-    GEMINI_API_KEY: str = Field(default="", validation_alias="GEMINI_API_KEY")
+    # Groq API Settings
+    # Sign up at https://console.groq.com (Free Tier)
+    GROQ_API_KEY: str = Field(default="", validation_alias="GROQ_API_KEY")
 
     # Pydantic Configuration
     model_config = SettingsConfigDict(
