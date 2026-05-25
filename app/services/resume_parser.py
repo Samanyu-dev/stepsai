@@ -1,3 +1,10 @@
+"""
+Steps AI Resume Text Extraction Service.
+
+This module provides text decoding capabilities for layout-aware document formats
+including PDF (using PyMuPDF) and Microsoft Word DOCX (using python-docx).
+"""
+
 import fitz  # PyMuPDF
 import docx
 import io

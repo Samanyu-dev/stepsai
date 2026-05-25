@@ -1,3 +1,9 @@
+"""
+Steps AI Lightweight Health Router.
+
+This module provides basic uptime checking and service health diagnostics.
+"""
+
 from fastapi import APIRouter
 from app.core.config import settings
 import time

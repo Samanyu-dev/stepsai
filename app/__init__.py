@@ -1,1 +1,3 @@
-# Steps AI Mock Interview Platform Application Package
+"""
+Steps AI Application Package.
+"""

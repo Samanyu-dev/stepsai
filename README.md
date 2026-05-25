@@ -4,23 +4,24 @@
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![Groq](https://img.shields.io/badge/Groq%20API-f55a2a?style=for-the-badge&logo=fastapi&logoColor=white)](https://groq.com)
 [![Llama-3.3](https://img.shields.io/badge/Llama%203.3%2070B-blue?style=for-the-badge)](https://meta.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
 
-An advanced, enterprise-grade AI-powered Mock Interview system developed for the **Steps AI National-Level Online Hackathon 2026**. The platform automates candidate assessments by analyzing resumes, carrying out a context-aware conversational mock interview with real-time SSE streaming, and providing automated multi-dimensional grading reports.
+An enterprise-grade, state-of-the-art AI-powered Mock Interview system developed for the **Steps AI National-Level Online Hackathon 2026**. The platform automates resume analysis, carries out a context-aware conversational mock interview with real-time SSE streaming, deduplicates questions, conducts vague answer probing, tracks session statuses, and compiles multi-dimensional grading reports into modern, premium branded PDFs.
 
 ---
 
-## 📌 Selected Problem Statement
+## 📌 Problem Statement
 
 ### **Problem Statement 2: AI Mock Interview Platform**
 > Develop an intelligent mock interview system that:
-> 1. Analyzes uploaded resumes (PDF & DOCX).
-> 2. Conducts personalized, conversational interviews with streaming answers.
-> 3. Generates role-based questions (HR, Technical, Behavioral).
-> 4. Evaluates candidate responses.
-> 5. Provides comprehensive feedback and improvement suggestions.
+> 1. **Analyzes Resumes**: Layout-aware text extraction for PDF and DOCX formats with programmatic skill-gap assessments.
+> 2. **Adaptive Conversational AI**: A rigid multi-turn interview loop with dynamic progression, vague answer probing, and real-time Server-Sent Events (SSE) token streaming.
+> 3. **Question Deduplication**: Ensures recruiter personas do not repeat previously asked topics inside a single active session.
+> 4. **Rigid Performance Diagnostics**: Automated transcript grading against specific competency frameworks using low-latency Groq LLM services in JSON Mode.
+> 5. **Premium PDF Export**: Automatically compiles visually appealing performance cards with circular metrics dials, radar tables, and targeted guidance recommendations.
 > 
-> *Domains Involved: Conversational AI, Resume Intelligence, AI Evaluation Systems, Career Technology.*
+> *Domains: Conversational AI, Resume Intelligence, Automated Performance Evaluation Systems, and Career Technologies.*
 
 ---
 
@@ -29,138 +30,179 @@ An advanced, enterprise-grade AI-powered Mock Interview system developed for the
 
 ---
 
-## 🛠️ Tech Stack Used
+## 🛠️ Tech Stack
 
-### 🧠 Backend (FastAPI Python Service)
-- **Core Framework**: [FastAPI](https://fastapi.tiangolo.com/) (High-performance Python Web Framework)
-- **Generative AI & LLM Engine**: [Groq llama-3.3-70b-versatile](https://console.groq.com/) (Free Tier, ultra-low latency)
-- **PDF Extraction**: [PyMuPDF / fitz](https://pymupdf.readthedocs.io/) (Ultra-fast PDF text parsing)
-- **DOCX Extraction**: [python-docx](https://python-docx.readthedocs.io/) (Structured Word Document parsing)
-- **Data Validation & Settings**: [Pydantic V2 & Pydantic-Settings](https://docs.pydantic.dev/)
-- **Testing Suite**: [Pytest](https://docs.pytest.org/) & [HTTPX](https://www.python-httpx.org/) (Async testing)
-- **Structured Telemetry Logging**: [Loguru](https://github.com/Delgan/loguru) (Async-safe, colorized rotating and compressed logs)
-- **Process Manager / Server**: [Uvicorn](https://www.uvicorn.org/)
+Our stack leverages a production-grade decoupled architecture. The Next.js cosmic user interface communicates directly with a multi-layered FastAPI REST framework, utilizing a persistent SQLite database and ultra-fast Groq API completions:
 
-### 🎨 Frontend (Next.js Premium Client)
-- **Core Framework**: [Next.js 16 (React 19 App Router)](https://nextjs.org/) (Production-grade SSR & SPA)
-- **Layout & Styling**: [Tailwind CSS 4](https://tailwindcss.com/) (Next-generation utility CSS engine)
-- **High-Performance Animations**: [GSAP (GreenSock Animation Platform)](https://greensock.com/gsap/) (Stunning, hardware-accelerated transitions & motion design)
-- **Interactive UI Icons**: [Lucide React](https://lucide.dev/) (Sleek pixel-perfect SVG vectors)
+| Layer | Technology / Library | Role in Stack | Key Benefit |
+| :--- | :--- | :--- | :--- |
+| **Frontend UI** | `Next.js 16` (React 19 App Router) | Interactive SPA Client | Dynamic SSR, layout streaming, and type safety |
+| **Motion Physics** | `GSAP` (GreenSock Platform) | Micro-interactions | Pulsating audio visuals, fluid fades, and glowing card entries |
+| **Styling Engine** | `Tailwind CSS 4` + CSS Variables | Glassmorphic Cosmic Design | Unified custom themes, dark-mode gradients, `#0b0f19` backdrops |
+| **API Backend** | `FastAPI` (Python 3.9+) | Core Service Gateway | Extreme speed, automated OpenAPI schema, asynchronous event loops |
+| **Generative AI** | `Groq Cloud API` | LLM Inference Engine | Free-tier budget, under 500ms latency, strict JSON schema output |
+| **LLM Model** | `llama-3.3-70b-versatile` | Recruiter & Grader Core | 70-Billion param cognitive logic, technical/HR persona adaptivity |
+| **Database** | `SQLite` (sqlite3) | Session & Data Persistence | Zero-dependency disk-based tables, structured JSON schemas |
+| **Ingestion Parsing**| `PyMuPDF` + `python-docx` | File Raw Text Extractor | Ultra-fast document parsing across standard layouts |
+| **Report Compiler** | `FPDF2` | Premium Branded PDF Engine | Layout grid systems, dynamic page counts, custom header banners |
+| **Security Layer** | `APIKeyHeader` + `X-API-Key` | API Request Gatekeeper | Optional strict path guarding with zero client disruptions |
+| **Traffic Control** | Thread-safe Sliding Window | In-memory Rate Limiter | Per-endpoint, IP-based client throttling (10/min, 60/min) |
+| **Structured Logs**  | `Loguru` + Interceptors | Multi-handler Logging | Daily rotating zip folders, uvicorn stderr redirection |
+| **Testing Suite** | `Pytest` + `HTTPX` TestClient | Automatic CI/CD Verification| Integrated database mocks, SSE streaming checks |
+| **Deployment** | `Docker` & `Docker Compose` | Container Orchestration | Instant multi-stage compilation and service startup |
 
 ---
 
-## 🏗️ System Architecture & Design
+## 🏗️ System Architecture
 
-The platform is designed around a decoupled, service-oriented architecture. The Next.js frontend communicates directly with the FastAPI REST controllers, rendering dynamic SSE streams and fetching compiled report PDFs seamlessly.
+Our services communicate via standard REST interfaces, using SSE streams for conversational loops, and SQLite for persistence:
 
 ```mermaid
 graph TD
     Client[Next.js Premium Frontend: port 3000] -->|Upload PDF/DOCX| API_Resume[POST /api/v1/resume/upload]
     Client -->|Launch Mode Mock Session| API_Start[POST /api/v1/interview/start]
     Client -->|Answer Question SSE Stream| API_Answer[POST /api/v1/interview/answer]
+    Client -->|Get Active Session Status| API_Status[GET /api/v1/interview/status/{session_id}]
     Client -->|End and evaluate session| API_End[POST /api/v1/interview/end]
     Client -->|Download PDF report| API_Report[GET /api/v1/report/{session_id}]
+    Client -->|Database Health Probe| API_Health[GET /health]
 
     subgraph "FastAPI Backend: port 8000"
-        API_Resume --> Parser[PyMuPDF & python-docx]
-        API_Start --> Engine[Interview Engine]
-        API_Answer --> Engine
-        API_End --> Evaluator[Groq JSON Grader]
-        API_Report --> Evaluator
+        API_Health --> DB_Check{SQLite Query Select 1}
+        API_Resume --> Limit_Up[Depends: upload_limiter]
+        API_Start --> Limit_Int[Depends: interview_limiter]
+        API_Answer --> Limit_Int
+        API_Resume --> Auth_Check[Depends: get_api_key]
         
-        Parser --> ResumeStore[InMemory Resume Cache]
-        Engine --> InterviewStore[InMemory Dialogue Cache]
+        Parser[PyMuPDF & python-docx] --> DB[(SQLite DB: stepsai.db)]
+        Engine[Interview Engine] --> DB
+        Evaluator[Groq JSON Grader] --> DB
+        PDF_Comp[FPDF2 Report Compiler] --> DB
         
-        Parser --> LLM[Groq Llama 3.3 70B Service]
-        Engine --> LLM
-        Evaluator --> LLM
+        Parser --> LLM_Call[Groq API Client]
+        Engine --> LLM_Call
+        Evaluator --> LLM_Call
     end
+
+    LLM_Call -->|Llama 3.3 70B JSON / Text| Groq_Cloud[Groq Cloud Inference Engine]
 ```
 
 ---
 
-## ⚙️ Implementation Approach & Workflow
+## 🚦 API Reference
 
-The platform delivers a 100% complete, context-aware interview preparation loop:
+The backend registers 7 primary endpoints under the `/api/v1` namespace, plus 2 base monitoring routes. Auth validation depends on `REQUIRE_AUTH` within settings:
 
-1. **Resume Intelligence (Phase 2)**: Candidate uploads their resume. `PyMuPDF` or `python-docx` extracts raw text. A Groq JSON schema parser profiles details (skills, roles, experience years, strengths) and caches them in memory.
-2. **recruiter Alex Syllabus (Phase 3)**: Candidate enters the room after choosing mode (`HR`, `Technical`, `Behavioral`) and difficulty. Recruiter Alex automatically detects experience levels and welcomes them with the first custom question.
-3. **SSE Conversational Room (Phase 3 & 5)**: Answers are submitted. Telemetry streams tokens letter-by-letter back to the Next.js screen via Server-Sent Events (`text/event-stream`). GSAP renders characters in fluid fades.
-4. **Performance Diagnostics & PDF Report (Phase 4)**: Groq grades each conversation turn on a 1-10 scale (Communication Clarity, Technical Depth, Relevance, Confidence). `fpdf2` compiles this into a custom-branded assessment PDF ready for download.
-5. **Loguru Interceptors & Docker Compose (Phase 5)**: Standard logging outputs colored live traces and writes weekly rotating logs under `/logs`. The multi-container setup launches the entire stack in one command.
-
----
-
-## 🌟 Features & Functionalities
-
-- [x] **Full REST API scaffolding** with automated OpenAPI docs (/docs)
-- [x] **Modular enterprise layout** decoupling configurations, routing, models, and services
-- [x] **Resume Intelligence**: Multi-format PDF and Word DOCX parsing and structured Groq JSON profiling (Phase 2)
-- [x] **Resume Session Stores**: Cache parsed candidate details in-memory, retrievable via GET `/resume/{session_id}` (Phase 2)
-- [x] **Conversational Recruiter SSE Stream**: Multi-turn dialogue with real-time SSE streaming, supporting HR, Technical, and Behavioral modes across Junior, Mid, and Senior difficulty levels (Phase 3)
-- [x] **Rubric Grading & PDF Export**: Detailed performance sheets with visual scores (Phase 4)
-- [x] **Next.js Premium SPA**: Responsive Dark Cosmic design with glassmorphism, glowing custom scorecards, pulsating audio visualizers, and GSAP reveals (Phase 5)
-- [x] **Rotating Loguru Logs**: Active interceptor rerouting standard python and uvicorn traces into rotating logs under `logs/stepsai.log` (Phase 5)
-- [x] **Docker containerization**: Discrete Dockerfiles for both services and parent orchestrating `docker-compose.yml` (Phase 5)
+| Endpoint | Method | Security | Parameters / Body | Description | Expected Output |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `/` | `GET` | None | None | Root greeting and documentation router redirect | `{"message": "...", "docs": "/docs"}` |
+| `/health` | `GET` | None | None | Active database connectivity SELECT check | `{"status": "healthy", "database": {"status": "healthy"}}` |
+| `/api/v1/health` | `GET` | None | None | Lightweight service uptime diagnostic info | `{"status": "healthy", "uptime_seconds": 12.3}` |
+| `/api/v1/resume/upload` | `POST` | `X-API-Key` | `file` (UploadFile), `job_role` (Query) | Layout-aware text extraction & Groq JSON profiling | `{"session_id": "uuid", "profile": {...}, "skill_gaps": [...]}` |
+| `/api/v1/resume/{session_id}`| `GET` | `X-API-Key` | `session_id` (Path) | Retrieve resume profile. Enforces 24-hr session expiry | `{"session_id": "uuid", "profile": {...}, "created_at": "..."}` |
+| `/api/v1/interview/start` | `POST` | `X-API-Key` | `resume_session_id`, `mode`, `difficulty` | Launches a mock session, registers syllabus schema | `{"interview_session_id": "uuid", "welcome_message": "..."}` |
+| `/api/v1/interview/answer` | `POST` | `X-API-Key` | `interview_session_id`, `answer` | Submits candidate response. Streams back next question | SSE Stream chunk-by-chunk (`text/event-stream`) |
+| `/api/v1/interview/status/{session_id}` | `GET` | `X-API-Key` | `session_id` (Path) | Returns active duration, index, and completion state | `{"session_id": "...", "elapsed_seconds": 142, "completed": false}` |
+| `/api/v1/interview/end` | `POST` | `X-API-Key` | `interview_session_id` | Terminate session. Grades transcripts, caches FPDF | `{"session_id": "uuid", "overall_score": 85, "report": {...}}` |
+| `/api/v1/report/{session_id}` | `GET` | `X-API-Key` | `session_id` (Path) | Fetches the compiled custom-branded PDF binary | PDF document stream (`application/pdf` headers) |
 
 ---
 
-## 🔑 Environment Variables Required
+## 📁 Directory Structure Summary
 
-Create a `.env` file in the root directory based on `.env.example`:
-
-| Variable Name | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| `PROJECT_NAME` | String | Title of the API project | `Steps AI Mock Interview Platform` |
-| `ENV` | String | Running stage (`development` or `production`) | `development` |
-| `HOST` | String | Network address to bind the server | `0.0.0.0` |
-| `PORT` | Integer | System port to open for the server | `8000` |
-| `LOG_LEVEL` | String | Verbosity of terminal output (`info`, `debug`, etc.) | `info` |
-| `GROQ_API_KEY` | String | API credential key from Groq Console | *Required for all LLM operations* |
+```text
+stepsai/
+├── app/
+│   ├── api/
+│   │   ├── v1/
+│   │   │   ├── health.py        # Service health checks and uptime loggers
+│   │   │   ├── resume.py        # Size-restricted multi-format uploads & expirations
+│   │   │   ├── interview.py     # SSE session start, stream answers & status checks
+│   │   │   └── evaluation.py    # Session ending, Groq rubrics, PDF downloads
+│   │   └── router.py            # Master endpoint namespace configuration
+│   ├── core/
+│   │   ├── config.py            # Unified Pydantic base settings manager
+│   │   ├── db.py                # Thread-safe SQLite initialization & connection pool
+│   │   ├── logging.py           # Loguru color console and rotating log routing
+│   │   ├── rate_limiter.py      # Thread-safe in-memory sliding-window IP limits
+│   │   ├── security.py          # Strict X-API-Key dependency validator
+│   │   └── taxonomy.py          # Professional competency tables and gap analyzer
+│   ├── models/
+│   │   ├── resume.py            # Pydantic formats for uploaded candidate profiles
+│   │   ├── interview.py         # Schema models for starting and tracking sessions
+│   │   └── evaluation.py        # Model structures for scorecards & grader results
+│   ├── services/
+│   │   ├── resume_parser.py     # PDF & Word text extractor engines
+│   │   ├── interview_engine.py  # Adaptive syllabus progression & question deduplication
+│   │   ├── evaluation.py        # Premium visual FPDF2 page grid report compiler
+│   │   └── llm.py               # Asynchronous Groq streams client with JSON fallback
+│   ├── tests/
+│   │   ├── test_resume.py       # Upload format checks and ingestion assertions
+│   │   ├── test_interview.py    # Deduplication streams and status test suites
+│   │   ├── test_evaluation.py   # Grader JSON assertions and PDF cache signatures
+│   │   ├── test_health.py       # Base route diagnostics asserts
+│   │   └── test_main.py         # Active SQLite connectivity health assertions
+│   └── main.py                  # FastAPI initialization, lifespan & CORS
+├── frontend/
+│   ├── src/
+│   │   └── app/
+│   │       ├── globals.css      # Dark starfield gradients and Tailwind structures
+│   │       ├── layout.tsx       # Standard fonts and metadata setup
+│   │       └── page.tsx         # Complex SPA glassmorphic React interactive client
+│   ├── tsconfig.json            # Strict TypeScript compiler definitions
+│   └── Dockerfile               # Multi-stage optimized Node deployment container
+├── Dockerfile                   # Python Uvicorn production-stage build
+├── docker-compose.yml           # Orchestrates Frontend, Backend & persistent volumes
+├── requirements.txt             # Strict pip package configurations
+├── .env.example                 # Standardized environment configuration template
+├── README.md                    # System comprehensive manual (This file)
+└── ARCHITECTURE.md              # Technical decision logs and data pipelines
+```
 
 ---
 
-## 🚀 Setup Instructions to Run Locally
+## 🚀 Setup & Execution Guide
 
-### Option A: Running via Docker Compose (Recommended)
-Make sure you have [Docker](https://www.docker.com/) running on your system, then build and boot both tiers:
+### Option A: Complete Docker Compose Orchestration (Recommended)
+Make sure you have [Docker](https://www.docker.com/) running locally, then spin up the environment with one command:
 ```bash
 docker-compose up --build
 ```
-- Open `http://localhost:3000` to interact with the premium Next.js dashboard.
-- Open `http://localhost:8000/docs` to access the interactive FastAPI Swagger specs.
+* **Cosmic Frontend Client Dashboard**: Access at `http://localhost:3000`
+* **Interactive FastAPI Swagger Documents**: Access at `http://localhost:8000/docs`
+* **Local Persistent Database File**: Automatically created as `stepsai.db` in your root workspace.
 
 ---
 
-### Option B: Running Local Services Individually
+### Option B: Local Services Dev Setup
 
-#### 1. Setup Backend API
-1. **Initialize virtual environment**:
+#### 1. Setup Backend API Service
+1. **Initialize and activate virtual environment**:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # Windows: venv\Scripts\activate
+   source venv/bin/activate
    ```
-2. **Install requirements**:
+2. **Install exact requirements**:
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
-3. **Configure environment**:
+3. **Configure environment settings**:
    ```bash
    cp .env.example .env
-   # Insert your Groq API Key inside .env
+   # Add your GROQ_API_KEY and set REQUIRE_AUTH=False for client testing
    ```
-4. **Boot FastAPI application**:
+4. **Boot FastAPI service**:
    ```bash
-   uvicorn app.main:app --reload
+   uvicorn app.main:app --reload --port 8000
    ```
 
-#### 2. Setup Next.js Frontend
-1. **Navigate to folder**:
+#### 2. Setup Next.js Frontend Client
+1. **Navigate to the frontend folder**:
    ```bash
    cd frontend
    ```
-2. **Install node modules**:
+2. **Install Node packages**:
    ```bash
    npm install
    ```
@@ -169,15 +211,48 @@ docker-compose up --build
    npm run dev
    ```
 4. **Open in browser**:
-   Navigate to `http://localhost:3000`.
+   Navigate to `http://localhost:3000` to interact with the platform.
 
 ---
 
-## 🧪 Running Automated Tests
+## 🧪 Automated Testing
 
-Make sure your virtual environment is active, then execute:
+We maintain a rigorous test suite of 13 unit tests verifying state, parsing logic, rate limiters, session expiry timers, database schemas, and streaming delimiters.
+
+To run the test suite, ensure your virtual environment is active, then execute:
 ```bash
-pytest -v
+./venv/bin/pytest -v
 ```
-All 10 test cases covering resume parsing, SSE streaming, turn-based dialogue, and PDF generation will run and pass cleanly.
 
+### Expected Output:
+```text
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0 -- /Users/apple/Desktop/stepsai/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/apple/Desktop/stepsai
+plugins: anyio-4.12.1
+collecting ... collected 13 items
+
+app/tests/test_evaluation.py::test_end_interview_session_not_found PASSED
+app/tests/test_evaluation.py::test_evaluation_and_pdf_generation_flow PASSED
+app/tests/test_evaluation.py::test_download_report_not_found PASSED
+app/tests/test_health.py::test_health_check PASSED
+app/tests/test_health.py::test_root_endpoint PASSED
+app/tests/test_interview.py::test_start_interview_invalid_resume_session PASSED
+app/tests/test_interview.py::test_interview_conversational_and_streaming_flow PASSED
+app/tests/test_interview.py::test_interview_question_deduplication_flow PASSED
+app/tests/test_interview.py::test_interview_session_status_endpoint PASSED
+app/tests/test_main.py::test_database_health_probe PASSED
+app/tests/test_resume.py::test_upload_resume_invalid_format PASSED
+app/tests/test_resume.py::test_upload_resume_and_retrieval_flow PASSED
+app/tests/test_resume.py::test_get_parsed_resume_not_found PASSED
+
+======================== 13 passed, 5 warnings in 0.36s ========================
+```
+
+---
+
+## 🔒 Security & Traffic Policy
+* **API Access Gates**: A validated `X-API-Key` can be required on all ingest and mock session endpoints by setting `REQUIRE_AUTH=True` in `.env`.
+* **Sliding-Window Throttling**: Restricts heavy uploads to max `10/min` and interactive answer submissions to max `60/min` per host IP.
+* **Strict Size Enforcements**: Rejects any file payload exceeding `5MB` directly at the HTTP layer, mitigating server CPU bloat.

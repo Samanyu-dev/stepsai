@@ -1,3 +1,10 @@
+"""
+Steps AI Resume Intelligence Flow Tests.
+
+This module asserts the correct operations of resume document format validations,
+file size constraints, Groq parser mock calls, and session profile storage operations.
+"""
+
 from fastapi.testclient import TestClient
 from unittest.mock import patch
 from app.main import app

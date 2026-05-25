@@ -1,3 +1,10 @@
+"""
+Steps AI Mock Interview Data Models.
+
+This module defines Pydantic schemas and Enums for managing mock interview
+sessions, including start requests, message turns, submissions, and status checks.
+"""
+
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 from enum import Enum
@@ -68,3 +75,12 @@ class SubmitAnswerResponse(BaseModel):
     current_question_index: int = Field(..., description="The index of the question that was just answered (1-indexed).")
     total_questions: int = Field(..., description="Total questions allocated for the session.")
     completed: bool = Field(..., description="True if this was the final turn and the interview has closed.")
+
+class SessionStatusResponse(BaseModel):
+    session_id: str
+    question_count: int
+    total_questions: int
+    current_difficulty: str
+    interview_mode: str
+    elapsed_seconds: int
+    is_complete: bool

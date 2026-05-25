@@ -1,3 +1,10 @@
+"""
+Steps AI Configuration Management.
+
+This module encapsulates all global settings and API keys using Pydantic Settings V2,
+automatically parsing from environmental variable mappings or local .env configuration files.
+"""
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
 
@@ -11,6 +18,16 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
     LOG_LEVEL: str = "info"
+    
+    # Auth Security settings
+    API_KEY: str = "stepsai_hackathon_2026_key"
+    REQUIRE_AUTH: bool = False
+    
+    # Database Settings
+    DATABASE_URL: str = "stepsai.db"
+    
+    # CORS Settings
+    CORS_ORIGINS: str = "http://localhost:3000"
     
     # Groq API Settings
     # Sign up at https://console.groq.com (Free Tier)

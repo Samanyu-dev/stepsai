@@ -1,1 +1,3 @@
-# API modules package containing standard router entries
+"""
+Steps AI API Namespace Package.
+"""

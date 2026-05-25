@@ -1,1 +1,3 @@
-# Core module package containing configuration and security settings
+"""
+Steps AI Core Package.
+"""

@@ -1,3 +1,9 @@
+"""
+Steps AI Health Probe Tests.
+
+This module asserts the correct operations of base route and diagnostic uptime checks.
+"""
+
 from fastapi.testclient import TestClient
 from app.main import app
 

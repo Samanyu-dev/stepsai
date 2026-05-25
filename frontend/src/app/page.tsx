@@ -61,6 +61,8 @@ interface FeedbackReport {
   evaluations: AnswerEvaluation[];
 }
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
 export default function MockInterviewApp() {
   // App Router Steps States
   const [step, setStep] = useState<"upload" | "profile" | "room" | "feedback">("upload");
@@ -173,7 +175,7 @@ export default function MockInterviewApp() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/resume/upload", {
+      const response = await fetch(`${API_BASE_URL}/api/v1/resume/upload`, {
         method: "POST",
         body: formData,
       });
@@ -209,7 +211,7 @@ export default function MockInterviewApp() {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/interview/start", {
+      const response = await fetch(`${API_BASE_URL}/api/v1/interview/start`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: json_stringify(payload),
@@ -260,7 +262,7 @@ export default function MockInterviewApp() {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/interview/answer", {
+      const response = await fetch(`${API_BASE_URL}/api/v1/interview/answer`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: json_stringify(payload),
@@ -334,7 +336,7 @@ export default function MockInterviewApp() {
     setError(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/interview/end", {
+      const response = await fetch(`${API_BASE_URL}/api/v1/interview/end`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: json_stringify({ session_id: interviewSessionId }),
@@ -736,7 +738,7 @@ export default function MockInterviewApp() {
                   {/* PDF report download floating button */}
                   <div className="pt-2">
                     <a
-                      href={`http://127.0.0.1:8000/api/v1/report/${feedbackReport.session_id}`}
+                      href={`${API_BASE_URL}/api/v1/report/${feedbackReport.session_id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 py-3 px-6 rounded-xl font-semibold bg-[#005571] hover:bg-[#004055] text-white text-sm shadow-md transition-all cursor-pointer"

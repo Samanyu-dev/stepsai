@@ -1,3 +1,10 @@
+"""
+Steps AI Mock Interview Evaluation Flow Tests.
+
+This module asserts the correct operations of transcripts parser, overall scores
+normalizations, circular metrics compilation, and FPDF PDF caches signatures.
+"""
+
 from fastapi.testclient import TestClient
 from unittest.mock import patch, MagicMock
 from app.main import app

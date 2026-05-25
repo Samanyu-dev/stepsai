@@ -1,40 +1,66 @@
+"""
+Steps AI Mock Interview Conversational Engine.
+
+This module manages the full interview session state, Recruiter Alex prompts,
+dynamic progression, vague answer checks, question deduplication, and database operations.
+"""
+
 import uuid
 import logging
-from threading import Lock
-from typing import Dict, List, Optional, Generator
+import json
+from typing import Dict, List, Optional, Generator, Any
 from app.models.interview import Message, InterviewMode, DifficultyLevel
 from app.models.resume import ResumeProfile
 from app.services.llm import llm_service
+from app.core.db import get_db_connection
 from fastapi import HTTPException
 
 logger = logging.getLogger(__name__)
 
-# --- Resume session store ---
+# --- SQLite-Backed Resume store ---
 class InMemoryResumeStore:
     """
-    Thread-safe volatile memory store for parsed candidate profiles (Phase 2).
+    Persistent SQLite-backed store for parsed candidate profiles (Phase 2).
     """
-    def __init__(self):
-        self._profiles: Dict[str, ResumeProfile] = {}
-        self._lock = Lock()
-
     def save_profile(self, profile: ResumeProfile) -> str:
         session_id = str(uuid.uuid4())
-        with self._lock:
-            self._profiles[session_id] = profile
+        profile_json = profile.model_dump_json()
+        resume_text = profile.summary or ""
+        
+        conn = get_db_connection()
+        try:
+            conn.execute(
+                "INSERT INTO resumes (session_id, profile_json, resume_text) VALUES (?, ?, ?)",
+                (session_id, profile_json, resume_text)
+            )
+            conn.commit()
+        except Exception as e:
+            logger.error(f"Failed to save resume in SQLite: {str(e)}", exc_info=True)
+            raise HTTPException(status_code=500, detail="Database write error on resume profiling.")
+        finally:
+            conn.close()
         return session_id
 
     def get_profile(self, session_id: str) -> Optional[ResumeProfile]:
-        with self._lock:
-            return self._profiles.get(session_id)
+        conn = get_db_connection()
+        try:
+            row = conn.execute("SELECT profile_json FROM resumes WHERE session_id = ?", (session_id,)).fetchone()
+            if row:
+                profile_dict = json.loads(row["profile_json"])
+                return ResumeProfile(**profile_dict)
+        except Exception as e:
+            logger.error(f"Failed to fetch resume from SQLite: {str(e)}", exc_info=True)
+        finally:
+            conn.close()
+        return None
 
 resume_store = InMemoryResumeStore()
 
 
-# --- Interview session store ---
+# --- Interview session state container ---
 class InterviewSession:
     """
-    Volatile state container representing an active mock interview session.
+    State container representing an active mock interview session.
     """
     def __init__(
         self,
@@ -43,8 +69,8 @@ class InterviewSession:
         interview_mode: InterviewMode,
         difficulty_level: DifficultyLevel,
         total_questions: int,
-        resume_context: dict
-    ):
+        resume_context: Dict[str, Any]
+    ) -> None:
         self.interview_session_id = interview_session_id
         self.resume_session_id = resume_session_id
         self.interview_mode = interview_mode
@@ -52,18 +78,17 @@ class InterviewSession:
         self.current_question_index = 1
         self.total_questions = total_questions
         self.messages: List[Message] = []
+        self.asked_questions: List[str] = []
         self.completed = False
         self.resume_context = resume_context
         self.estimated_job_role = resume_context.get("estimated_job_role", "Software Engineer")
 
+
+# --- SQLite-Backed Interview session store ---
 class InMemoryInterviewStore:
     """
-    Thread-safe store for active mock interviews (Phase 3).
+    Persistent SQLite-backed store for active mock interviews (Phase 3).
     """
-    def __init__(self):
-        self._sessions: Dict[str, InterviewSession] = {}
-        self._lock = Lock()
-
     def create_session(
         self,
         resume_session_id: str,
@@ -73,94 +98,232 @@ class InMemoryInterviewStore:
         resume_profile: ResumeProfile
     ) -> InterviewSession:
         interview_session_id = str(uuid.uuid4())
-        session = InterviewSession(
+        resume_context = resume_profile.model_dump()
+        messages_payload: Dict[str, Any] = {
+            "messages": [],
+            "asked_questions": []
+        }
+        
+        conn = get_db_connection()
+        try:
+            conn.execute(
+                """
+                INSERT INTO interviews 
+                (interview_session_id, resume_session_id, interview_mode, difficulty_level, 
+                 current_question_index, total_questions, messages_json, completed, resume_context)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    interview_session_id,
+                    resume_session_id,
+                    interview_mode.value,
+                    difficulty_level.value,
+                    1,
+                    total_questions,
+                    json.dumps(messages_payload),
+                    0,
+                    json.dumps(resume_context)
+                )
+            )
+            conn.commit()
+        except Exception as e:
+            logger.error(f"Failed to create interview session in SQLite: {str(e)}", exc_info=True)
+            raise HTTPException(status_code=500, detail="Database write error on session creation.")
+        finally:
+            conn.close()
+            
+        return InterviewSession(
             interview_session_id=interview_session_id,
             resume_session_id=resume_session_id,
             interview_mode=interview_mode,
             difficulty_level=difficulty_level,
             total_questions=total_questions,
-            resume_context=resume_profile.model_dump()
+            resume_context=resume_context
         )
-        with self._lock:
-            self._sessions[interview_session_id] = session
-        return session
 
     def get_session(self, session_id: str) -> Optional[InterviewSession]:
-        with self._lock:
-            return self._sessions.get(session_id)
+        conn = get_db_connection()
+        try:
+            row = conn.execute("SELECT * FROM interviews WHERE interview_session_id = ?", (session_id,)).fetchone()
+            if row:
+                session = InterviewSession(
+                    interview_session_id=row["interview_session_id"],
+                    resume_session_id=row["resume_session_id"],
+                    interview_mode=InterviewMode(row["interview_mode"]),
+                    difficulty_level=DifficultyLevel(row["difficulty_level"]),
+                    total_questions=row["total_questions"],
+                    resume_context=json.loads(row["resume_context"])
+                )
+                session.current_question_index = row["current_question_index"]
+                session.completed = bool(row["completed"])
+                
+                # Deserialize messages history list and asked questions list
+                raw_payload = json.loads(row["messages_json"])
+                if isinstance(raw_payload, dict) and "messages" in raw_payload:
+                    msgs_list = raw_payload["messages"]
+                    session.asked_questions = raw_payload.get("asked_questions", [])
+                else:
+                    msgs_list = raw_payload
+                    session.asked_questions = []
+                    
+                session.messages = [Message(**m) for m in msgs_list]
+                return session
+        except Exception as e:
+            logger.error(f"Failed to fetch session from SQLite: {str(e)}", exc_info=True)
+        finally:
+            conn.close()
+        return None
 
-    def save_session(self, session: InterviewSession):
-        with self._lock:
-            self._sessions[session.interview_session_id] = session
+    def save_session(self, session: InterviewSession) -> None:
+        conn = get_db_connection()
+        try:
+            msgs_list = [m.model_dump() for m in session.messages]
+            messages_payload: Dict[str, Any] = {
+                "messages": msgs_list,
+                "asked_questions": session.asked_questions
+            }
+            conn.execute(
+                """
+                UPDATE interviews 
+                SET current_question_index = ?, difficulty_level = ?, messages_json = ?, completed = ?
+                WHERE interview_session_id = ?
+                """,
+                (
+                    session.current_question_index,
+                    session.difficulty_level.value,
+                    json.dumps(messages_payload),
+                    1 if session.completed else 0,
+                    session.interview_session_id
+                )
+            )
+            conn.commit()
+        except Exception as e:
+            logger.error(f"Failed to update session in SQLite: {str(e)}", exc_info=True)
+        finally:
+            conn.close()
 
+
+# --- Orchestrating Interview Engine ---
 class InterviewEngine:
     """
     Orchestration engine driving syllabus generation, recruiter personas,
-    and Server-Sent Events (SSE) streaming progress.
+    adaptive difficulty tiers progressions, and SSE streaming.
     """
-    def __init__(self):
+    def __init__(self) -> None:
         self.store = InMemoryInterviewStore()
 
-    def _build_system_prompt(self, session: InterviewSession) -> str:
+    def _adapt_difficulty_tier(self, session: InterviewSession, last_answer: str) -> None:
         """
-        Assembles comprehensive recruiter system prompt injecting candidates context,
-        the active mode parameters (HR, Technical, Behavioral), and current index.
+        Dynamically analyzes the candidate's last answer and adjusts the session difficulty level
+        (Junior -> Mid -> Senior, corresponding to Easy -> Medium -> Hard prompts).
+        """
+        answer_len = len(last_answer)
+        if answer_len < 40:
+            # Decrease difficulty if possible due to weak/brief answer quality
+            if session.difficulty_level == DifficultyLevel.SENIOR:
+                session.difficulty_level = DifficultyLevel.MID
+            elif session.difficulty_level == DifficultyLevel.MID:
+                session.difficulty_level = DifficultyLevel.JUNIOR
+            logger.info(f"Session {session.interview_session_id}: decreased difficulty to {session.difficulty_level.value} due to brief answer ({answer_len} chars).")
+        elif answer_len > 120:
+            # Increase difficulty if possible due to detailed/strong answer quality
+            if session.difficulty_level == DifficultyLevel.JUNIOR:
+                session.difficulty_level = DifficultyLevel.MID
+            elif session.difficulty_level == DifficultyLevel.MID:
+                session.difficulty_level = DifficultyLevel.SENIOR
+            logger.info(f"Session {session.interview_session_id}: increased difficulty to {session.difficulty_level.value} due to detailed answer ({answer_len} chars).")
+
+    def _assess_answer_quality(self, answer: str) -> str:
+        """Returns 'weak' or 'adequate' based on answer content heuristics."""
+        stripped = answer.strip()
+        if len(stripped) < 80:
+            return "weak"
+        weak_phrases = ["i think", "maybe", "not sure", "i don't know", 
+                        "i am not sure", "i guess", "probably", "i'm not sure"]
+        if any(phrase in stripped.lower() for phrase in weak_phrases):
+            return "weak"
+        return "adequate"
+
+    def _build_adaptive_recruiter_prompt(self, session: InterviewSession) -> str:
+        """
+        Assembles strict technical recruiter prompt injecting current candidate context,
+        turn transcript, last answer assessment, and dynamic difficulty parameters.
         """
         context = session.resume_context
-        skills_str = ", ".join(context.get("skills", []))
-        candidate_name = context.get("candidate_name") or "Candidate"
+        skills_str = ", ".join(context.get("skills", ["Python", "System Design"]))
+        experience_years = context.get("experience_years", 2)
+        seniority = session.difficulty_level.value
+        job_role = session.estimated_job_role
+        mode = session.interview_mode.value
         
-        # Customize structural question focus based on mode selection
-        if session.interview_mode == InterviewMode.HR:
-            syllabus_details = (
-                "1. Question 1 (Background & Warm Welcome): Introductory greetings and background walkthrough.\n"
-                "2. Question 2 (Teamwork & Collaboration): Experience handling group tasks, remote syncs, or disagreements.\n"
-                "3. Question 3 (Prioritization & Pressure): Resolving strict deadlines or scope shifts.\n"
-                "4. Question 4 (Conflict Resolution): Under pressure case study or dealing with a difficult peer.\n"
-                "5. Question 5 (HR / Values / Salary Expectations): Cultural values, salary brackets, and closing.\n"
-            )
-            mode_instruction = "HR Recruiter focusing on communication, values, remote synchronization, and organizational skills."
-        elif session.interview_mode == InterviewMode.BEHAVIORAL:
-            syllabus_details = (
-                "1. Question 1 (Background & Warm Welcome): Introduction and walkthrough of recent experiences.\n"
-                "2. Question 2 (STAR Scenario - Technical Failure): Detail a significant technical challenge or project failure and outcome.\n"
-                "3. Question 3 (STAR Scenario - Conflict): Handling strict deadlines, technical disagreements, or client problems.\n"
-                "4. Question 4 (STAR Scenario - Leadership): A time when the candidate took initiative or led a task.\n"
-                "5. Question 5 (HR / Career Drivers): Closing discussion on goals and mock closure.\n"
-            )
-            mode_instruction = "Behavioral Coach probing concrete experiences using the STAR method (Situation, Task, Action, Result)."
-        else: # Technical Mode
-            syllabus_details = (
-                "1. Question 1 (Background & Warm Welcome): Welcome and short architectural walkthrough of their major project.\n"
-                "2. Question 2 (Core Technical Concept): In-depth query targeting language features or framework mechanics (e.g. async/threads, memory).\n"
-                "3. Question 3 (System Architecture Design): Scalability, database selections, queue processing, or microservice components.\n"
-                "4. Question 4 (Under Pressure Scenario): Handling production system outages or bugs under strict deadlines.\n"
-                "5. Question 5 (HR / Career Alignment): Long-term technical trajectory and mock closing.\n"
-            )
-            mode_instruction = "Senior Technical Interviewer checking coding mechanics, systems architecture decisions, and scaling issues."
+        # Determine difficulty label
+        difficulty_label = "Medium"
+        if seniority == "Junior":
+            difficulty_label = "Easy"
+        elif seniority == "Senior":
+            difficulty_label = "Hard"
+
+        # Build conversation transcript
+        transcript_turns = []
+        pairs = []
+        last_question = "N/A"
+        last_answer = "N/A"
+        
+        for msg in session.messages:
+            if msg.role == "assistant":
+                last_question = msg.content
+            elif msg.role == "user" and last_question != "N/A":
+                pairs.append((last_question, msg.content))
+                last_question = "N/A"
+                
+        for idx, (q, a) in enumerate(pairs, 1):
+            transcript_turns.append(f"Turn {idx}:\nQuestion: {q}\nAnswer: {a}\n")
+            
+        transcript = "\n".join(transcript_turns) if transcript_turns else "None (Mock interview has just started)"
+        
+        if pairs:
+            last_question = pairs[-1][0]
+            last_answer = pairs[-1][1]
 
         prompt = (
-            "You are Alex, an elite, highly empathetic AI Recruiter at Steps AI. "
-            "Your objective is to conduct a highly professional, conversational mock interview.\n\n"
-            f"--- MOCK INTERVIEW PARAMETERS ---\n"
-            f"- Recruiter Persona Focus: {mode_instruction}\n"
-            f"- Target Interview Mode: {session.interview_mode.value}\n"
-            f"- Seniority Level: {session.difficulty_level.value}\n\n"
-            f"--- CANDIDATE PROFILE INFO ---\n"
-            f"- Candidate Name: {candidate_name}\n"
-            f"- Estimated Job Role: {session.estimated_job_role}\n"
-            f"- Core Skills: {skills_str}\n"
-            f"- Experience Summaries: {', '.join(context.get('work_experience_summaries', []))}\n"
-            f"- Education: {', '.join(context.get('education_summaries', []))}\n\n"
-            f"--- INTERVIEW SYLLABUS ---\n{syllabus_details}\n"
-            f"--- MANDATORY GUIDELINES ---\n"
-            "- Speak naturally, conversationally, and with professional empathy. Do NOT sound like a robotic checklist.\n"
-            f"- The interview has a strict limit of exactly {session.total_questions} questions.\n"
-            f"- You are CURRENTLY presenting Question {session.current_question_index} out of {session.total_questions}.\n"
-            "- **IMPORTANT**: Ask exactly ONE question at a time. Do not compile multiple queries or checklists.\n"
-            "- Acknowledge the candidate's preceding response with highly professional, brief transition feedback before pivoting.\n"
-            "- Customize question complexities to fit their seniority tier."
+            "You are a strict, senior technical interviewer at a top-tier company.\n\n"
+            "Candidate profile:\n"
+            f"- Role: {job_role}\n"
+            f"- Seniority: {seniority}\n"
+            f"- Skills: {skills_str}\n"
+            f"- Experience: {experience_years} years\n\n"
+            f"Interview mode: {mode}  # HR | Technical | Behavioral\n"
+            f"Difficulty: {difficulty_label}  # Easy | Medium | Hard\n\n"
+            "Rules:\n"
+            "- Ask ONE question at a time, never two\n"
+            "- Each question must be different from previous ones\n"
+            "- Adapt difficulty based on answer quality\n"
+            "- If answer is vague or wrong, ask a follow-up probing the same concept\n"
+            "- If answer is strong, move to a harder concept\n"
+            "- Never reveal scoring or evaluation\n"
+            "- Never say \"Great answer!\" or give positive feedback mid-interview\n"
+            "- Keep questions under 3 sentences\n"
+            f"- For Technical: focus on {skills_str}\n"
+            "- For HR: focus on motivation, culture fit, conflict resolution\n"
+            "- For Behavioral: use STAR-method prompting situations\n\n"
+            f"Start with: ask a warm-up question appropriate for {seniority} {job_role}.\n\n"
+            f"You are conducting a {mode} interview for a {seniority} {job_role}.\n\n"
+            "Conversation so far:\n"
+            f"{transcript}\n\n"
+            f"Last question asked: {last_question}\n"
+            f"Candidate's answer: {last_answer}\n\n"
+            "Internally assess (do NOT output this):\n"
+            "- Was the answer correct/complete? (yes/partial/no)\n"
+            "- Was it vague or specific?\n"
+            "- What concept did it test?\n\n"
+            "Then output ONLY the next interview question. One question. No preamble. No feedback. No \"I see\" or \"Good point\".\n"
+            "If answer was weak, probe deeper on the same concept.\n"
+            "If answer was strong, advance to a harder related concept.\n"
+            f"If this is question {session.current_question_index} of {session.total_questions}, make it appropriately conclusive."
         )
+        if len(session.asked_questions) > 0:
+            questions_list = "\n".join(session.asked_questions[-5:])
+            prompt += f"\n\nDo NOT repeat any of these previously asked questions:\n{questions_list}"
         return prompt
 
     def start_interview(
@@ -183,10 +346,13 @@ class InterviewEngine:
 
         # Auto-detect seniority level if None is supplied
         if not difficulty_level:
-            level_str = profile.experience_level.lower()
-            if "senior" in level_str or "lead" in level_str or "principal" in level_str:
+            level_str_sen = (profile.seniority or "Junior").lower()
+            level_str_exp = (profile.experience_level or "Junior").lower()
+            
+            if ("senior" in level_str_sen or "lead" in level_str_sen or "principal" in level_str_sen or
+                "senior" in level_str_exp or "lead" in level_str_exp or "principal" in level_str_exp):
                 difficulty_level = DifficultyLevel.SENIOR
-            elif "mid" in level_str or "experience" in level_str:
+            elif "mid" in level_str_sen or "experience" in level_str_sen or "mid" in level_str_exp or "experience" in level_str_exp:
                 difficulty_level = DifficultyLevel.MID
             else:
                 difficulty_level = DifficultyLevel.JUNIOR
@@ -199,16 +365,17 @@ class InterviewEngine:
             resume_profile=profile
         )
 
-        system_prompt = self._build_system_prompt(session)
+        system_prompt = self._build_adaptive_recruiter_prompt(session)
         opening_prompt = [
             Message(
                 role="user", 
-                content="Please introduce yourself warmly, state the interview parameters, and ask the first syllabus question based on the resume."
+                content=f"Please introduce yourself warmly, state the parameters, and ask the warm-up question based on the resume target role {session.estimated_job_role}."
             )
         ]
 
         first_question = llm_service.chat_interview_question_sync(system_prompt, opening_prompt)
         session.messages.append(Message(role="assistant", content=first_question))
+        session.asked_questions.append(first_question)
         self.store.save_session(session)
         return session
 
@@ -233,9 +400,12 @@ class InterviewEngine:
         # 1. Store candidate answer
         session.messages.append(Message(role="user", content=candidate_answer))
 
-        # 2. Check if final allocated turn
+        # 2. Adapt difficulty dynamically based on answer quality
+        self._adapt_difficulty_tier(session, candidate_answer)
+
+        # 3. Check if final allocated turn
         if session.current_question_index >= session.total_questions:
-            concluding_prompt = self._build_system_prompt(session) + (
+            concluding_prompt = self._build_adaptive_recruiter_prompt(session) + (
                 "\n\n--- ACTION REQUIRED ---\n"
                 "The candidate has responded to your final question. "
                 "Briefly acknowledge their answer, thank them warmly for their time, "
@@ -252,13 +422,24 @@ class InterviewEngine:
                 response_text = "".join(full_response_list).strip()
                 if response_text:
                     session.messages.append(Message(role="assistant", content=response_text))
+                    session.asked_questions.append(response_text)
                 session.completed = True
                 self.store.save_session(session)
             return
 
-        # 3. Otherwise, progress and stream next question
+        # 4. Otherwise, progress and stream next question
         session.current_question_index += 1
-        system_prompt = self._build_system_prompt(session)
+        
+        # Assess quality and log
+        quality = self._assess_answer_quality(candidate_answer)
+        logger.debug(f"Answer quality for session {session_id}: {quality}")
+        
+        system_prompt = self._build_adaptive_recruiter_prompt(session)
+        if quality == "weak":
+            system_prompt = (
+                "IMPORTANT: The candidate just gave a vague or incomplete answer. Ask a targeted "
+                "follow-up probing the SAME concept. Do not advance to a new topic.\n\n"
+            ) + system_prompt
         
         full_response_list = []
         try:
@@ -269,6 +450,7 @@ class InterviewEngine:
             response_text = "".join(full_response_list).strip()
             if response_text:
                 session.messages.append(Message(role="assistant", content=response_text))
+                session.asked_questions.append(response_text)
             self.store.save_session(session)
 
 # Singleton orchestrator

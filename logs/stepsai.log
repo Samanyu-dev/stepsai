@@ -19,3 +19,1412 @@
 2026-05-25 12:24:08.889 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
 2026-05-25 12:24:08.890 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/c352228b-d7f0-461a-8b22-dbf80ce7b249 "HTTP/1.1 200 OK"
 2026-05-25 12:24:08.892 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:17:45.457 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:17:45.574 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:17:46.092 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:17:46.094 | INFO     | uvicorn.server:_serve:84 - Started server process [88235]
+2026-05-25 16:17:46.094 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:17:46.094 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:18:00.541 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:18:00.642 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:18:00.643 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 16:18:00.977 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:18:00.980 | INFO     | uvicorn.server:_serve:84 - Started server process [88251]
+2026-05-25 16:18:00.980 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:18:00.980 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:18:07.037 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:18:07.139 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:18:07.455 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:18:07.457 | INFO     | uvicorn.server:_serve:84 - Started server process [88260]
+2026-05-25 16:18:07.458 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:18:07.458 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:18:17.762 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:18:17.863 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:18:18.191 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:18:18.194 | INFO     | uvicorn.server:_serve:84 - Started server process [88267]
+2026-05-25 16:18:18.194 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:18:18.194 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:18:33.242 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:18:33.343 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:18:33.671 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:18:33.673 | INFO     | uvicorn.server:_serve:84 - Started server process [88276]
+2026-05-25 16:18:33.673 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:18:33.674 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:18:47.306 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:18:47.407 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:18:47.736 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:18:47.738 | INFO     | uvicorn.server:_serve:84 - Started server process [88285]
+2026-05-25 16:18:47.739 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:18:47.739 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:19:00.968 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:19:01.070 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:19:01.070 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 16:19:01.416 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:19:01.419 | INFO     | uvicorn.server:_serve:84 - Started server process [88294]
+2026-05-25 16:19:01.419 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:19:01.419 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:19:07.482 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:19:07.583 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:19:07.909 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:19:07.911 | INFO     | uvicorn.server:_serve:84 - Started server process [88303]
+2026-05-25 16:19:07.911 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:19:07.913 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:19:07.913 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:19:14.783 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:19:14.884 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:19:14.885 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 16:19:15.220 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:19:15.222 | INFO     | uvicorn.server:_serve:84 - Started server process [88311]
+2026-05-25 16:19:15.222 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:19:15.223 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:19:15.223 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:19:21.688 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:19:21.789 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:19:22.112 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:19:22.115 | INFO     | uvicorn.server:_serve:84 - Started server process [88318]
+2026-05-25 16:19:22.115 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:19:22.116 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:19:22.116 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:19:27.267 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:19:27.368 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:19:27.698 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:19:27.701 | INFO     | uvicorn.server:_serve:84 - Started server process [88325]
+2026-05-25 16:19:27.701 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:19:27.702 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:19:27.702 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:22:10.897 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:22:10.918 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:22:10.936 | ERROR    | app.services.evaluation:evaluate_interview:262 - Failed to compile Groq evaluation report: 1 validation error for FeedbackReport
+overall_score
+  Input should be less than or equal to 100 [type=less_than_equal, input_value=750, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.13/v/less_than_equal
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x107e081f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6176419840)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x108bf8d30>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6176419840)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x113c0eaf0>, api_key='', payload=EndInterviewRequest(session_id='84593718-389e-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x113dda040>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ '84593718-389e-45ed-915d-5dfb2967575a'
+             │                  │                  └ EndInterviewRequest(session_id='84593718-389e-45ed-915d-5dfb2967575a')
+             │                  └ <function EvaluationService.evaluate_interview at 0x113c0e940>
+             └ <app.services.evaluation.EvaluationService object at 0x10af15bb0>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 226, in evaluate_interview
+    report = FeedbackReport(
+             └ <class 'app.models.evaluation.FeedbackReport'>
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     │    │                      │               │                   └ FeedbackReport()
+                     │    │                      │               └ {'session_id': '84593718-389e-45ed-915d-5dfb2967575a', 'estimated_job_role': 'Frontend Engineer', 'experience_level': 'Junior...
+                     │    │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+                     │    └ SchemaValidator(title="FeedbackReport", validator=Model(
+                     │          ModelValidator {
+                     │              revalidate: Never,
+                     │              validator: M...
+                     └ FeedbackReport()
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for FeedbackReport
+overall_score
+  Input should be less than or equal to 100 [type=less_than_equal, input_value=750, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.13/v/less_than_equal
+2026-05-25 16:22:10.942 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 502 Bad Gateway"
+2026-05-25 16:22:10.971 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:22:10.973 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:22:10.974 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:22:10.976 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:22:10.979 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:22:10.983 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:22:10.985 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:22:10.987 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/25092c14-636b-44b3-858e-79cdff5af355 "HTTP/1.1 200 OK"
+2026-05-25 16:22:10.988 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:22:27.918 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:22:28.019 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:22:28.351 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:22:28.353 | INFO     | uvicorn.server:_serve:84 - Started server process [88344]
+2026-05-25 16:22:28.353 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:22:28.354 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:22:28.355 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:22:42.494 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:22:42.595 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:22:42.935 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:22:42.937 | INFO     | uvicorn.server:_serve:84 - Started server process [88354]
+2026-05-25 16:22:42.937 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:22:42.938 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:22:42.938 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:23:05.045 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:23:05.061 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:23:05.077 | ERROR    | app.services.evaluation:generate_pdf_report:471 - Failed to generate PDF document structure: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1095d41f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6151204864)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x10a3c4d30>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6151204864)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x1153ceaf0>, api_key='', payload=EndInterviewRequest(session_id='87d9bc7e-cff8-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x115576e40>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ '87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad'
+             │                  │                  └ EndInterviewRequest(session_id='87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad')
+             │                  └ <function EvaluationService.evaluate_interview at 0x1153ce940>
+             └ <app.services.evaluation.EvaluationService object at 0x10c6e1c40>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x1153ce9d0>
+                └ <app.services.evaluation.EvaluationService object at 0x10c6e1c40>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:23:05.080 | ERROR    | app.services.evaluation:evaluate_interview:263 - Failed to compile Groq evaluation report: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1095d41f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6151204864)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x10a3c4d30>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6151204864)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x1153ceaf0>, api_key='', payload=EndInterviewRequest(session_id='87d9bc7e-cff8-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x115576e40>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ '87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad'
+             │                  │                  └ EndInterviewRequest(session_id='87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad')
+             │                  └ <function EvaluationService.evaluate_interview at 0x1153ce940>
+             └ <app.services.evaluation.EvaluationService object at 0x10c6e1c40>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='87d9bc7e-cff8-45dc-b1f0-28c7f4f235ad', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x1153ce9d0>
+                └ <app.services.evaluation.EvaluationService object at 0x10c6e1c40>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 472, in generate_pdf_report
+    raise HTTPException(
+          └ <class 'fastapi.exceptions.HTTPException'>
+
+fastapi.exceptions.HTTPException: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:23:05.081 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 502 Bad Gateway"
+2026-05-25 16:23:05.111 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:23:05.113 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:23:05.114 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:23:05.116 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:23:05.119 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:23:05.122 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:23:05.125 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:23:05.126 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/f01cdf98-32fe-4020-a536-72064e38b992 "HTTP/1.1 200 OK"
+2026-05-25 16:23:05.127 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:24:28.963 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:24:28.976 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:24:28.992 | ERROR    | app.services.evaluation:generate_pdf_report:471 - Failed to generate PDF document structure: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1090dc1f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6156120064)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x109ecdd30>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6156120064)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x10feb2af0>, api_key='', payload=EndInterviewRequest(session_id='2dacb1c4-5267-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x115087280>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ '2dacb1c4-5267-47f8-a528-2983768be451'
+             │                  │                  └ EndInterviewRequest(session_id='2dacb1c4-5267-47f8-a528-2983768be451')
+             │                  └ <function EvaluationService.evaluate_interview at 0x10feb2940>
+             └ <app.services.evaluation.EvaluationService object at 0x10c1e8a30>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='2dacb1c4-5267-47f8-a528-2983768be451', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x10feb29d0>
+                └ <app.services.evaluation.EvaluationService object at 0x10c1e8a30>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='2dacb1c4-5267-47f8-a528-2983768be451', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:24:28.995 | ERROR    | app.services.evaluation:evaluate_interview:263 - Failed to compile Groq evaluation report: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='2dacb1c4-5267-47f8-a528-2983768be451', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1090dc1f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6156120064)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x109ecdd30>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6156120064)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x10feb2af0>, api_key='', payload=EndInterviewRequest(session_id='2dacb1c4-5267-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x115087280>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ '2dacb1c4-5267-47f8-a528-2983768be451'
+             │                  │                  └ EndInterviewRequest(session_id='2dacb1c4-5267-47f8-a528-2983768be451')
+             │                  └ <function EvaluationService.evaluate_interview at 0x10feb2940>
+             └ <app.services.evaluation.EvaluationService object at 0x10c1e8a30>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='2dacb1c4-5267-47f8-a528-2983768be451', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x10feb29d0>
+                └ <app.services.evaluation.EvaluationService object at 0x10c1e8a30>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 472, in generate_pdf_report
+    raise HTTPException(
+          └ <class 'fastapi.exceptions.HTTPException'>
+
+fastapi.exceptions.HTTPException: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:24:28.996 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 502 Bad Gateway"
+2026-05-25 16:24:29.026 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:25:27.863 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:25:27.876 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:25:27.892 | ERROR    | app.services.evaluation:generate_pdf_report:471 - Failed to generate PDF document structure: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x107bd81f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6178156544)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x108983dc0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6178156544)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x11398faf0>, api_key='', payload=EndInterviewRequest(session_id='d57948a2-d6b2-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x113b48240>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ 'd57948a2-d6b2-4fd6-99ad-d496e1045cd3'
+             │                  │                  └ EndInterviewRequest(session_id='d57948a2-d6b2-4fd6-99ad-d496e1045cd3')
+             │                  └ <function EvaluationService.evaluate_interview at 0x11398f940>
+             └ <app.services.evaluation.EvaluationService object at 0x10aca19a0>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='d57948a2-d6b2-4fd6-99ad-d496e1045cd3', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x11398f9d0>
+                └ <app.services.evaluation.EvaluationService object at 0x10aca19a0>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='d57948a2-d6b2-4fd6-99ad-d496e1045cd3', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:25:27.895 | ERROR    | app.services.evaluation:evaluate_interview:263 - Failed to compile Groq evaluation report: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='d57948a2-d6b2-4fd6-99ad-d496e1045cd3', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x107bd81f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6178156544)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x108983dc0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6178156544)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x11398faf0>, api_key='', payload=EndInterviewRequest(session_id='d57948a2-d6b2-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x113b48240>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ 'd57948a2-d6b2-4fd6-99ad-d496e1045cd3'
+             │                  │                  └ EndInterviewRequest(session_id='d57948a2-d6b2-4fd6-99ad-d496e1045cd3')
+             │                  └ <function EvaluationService.evaluate_interview at 0x11398f940>
+             └ <app.services.evaluation.EvaluationService object at 0x10aca19a0>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='d57948a2-d6b2-4fd6-99ad-d496e1045cd3', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x11398f9d0>
+                └ <app.services.evaluation.EvaluationService object at 0x10aca19a0>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 472, in generate_pdf_report
+    raise HTTPException(
+          └ <class 'fastapi.exceptions.HTTPException'>
+
+fastapi.exceptions.HTTPException: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:25:27.896 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 502 Bad Gateway"
+2026-05-25 16:25:27.925 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:27:27.233 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:27:27.247 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:27:27.262 | ERROR    | app.services.evaluation:generate_pdf_report:471 - Failed to generate PDF document structure: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1060841f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6206844928)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x106e73dc0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6206844928)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x111e62b80>, api_key='', payload=EndInterviewRequest(session_id='de019706-0595-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x11201dbc0>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ 'de019706-0595-4b4f-b23c-2137a8d465b8'
+             │                  │                  └ EndInterviewRequest(session_id='de019706-0595-4b4f-b23c-2137a8d465b8')
+             │                  └ <function EvaluationService.evaluate_interview at 0x111e629d0>
+             └ <app.services.evaluation.EvaluationService object at 0x109182d90>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='de019706-0595-4b4f-b23c-2137a8d465b8', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x111e62a60>
+                └ <app.services.evaluation.EvaluationService object at 0x109182d90>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='de019706-0595-4b4f-b23c-2137a8d465b8', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:27:27.265 | ERROR    | app.services.evaluation:evaluate_interview:263 - Failed to compile Groq evaluation report: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+Traceback (most recent call last):
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 461, in generate_pdf_report
+    tips = report.improvement_tips if idx == 1 else ["Leverage specific technical terms and examples.", "Focus on structure using the STAR methodology."]
+           │                          └ 1
+           └ FeedbackReport(session_id='de019706-0595-4b4f-b23c-2137a8d465b8', estimated_job_role='Frontend Engineer', experience_level='J...
+
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+
+AttributeError: 'FeedbackReport' object has no attribute 'improvement_tips'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 930, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1060841f0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6206844928)>
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x106e73dc0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 6206844928)>
+  File "/Users/apple/Desktop/stepsai/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             │       │   │      └ ()
+             │       │   └ functools.partial(<function end_interview at 0x111e62b80>, api_key='', payload=EndInterviewRequest(session_id='de019706-0595-...
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x11201dbc0>
+
+  File "/Users/apple/Desktop/stepsai/app/api/v1/evaluation.py", line 26, in end_interview
+    report = evaluation_service.evaluate_interview(payload.session_id)
+             │                  │                  │       └ 'de019706-0595-4b4f-b23c-2137a8d465b8'
+             │                  │                  └ EndInterviewRequest(session_id='de019706-0595-4b4f-b23c-2137a8d465b8')
+             │                  └ <function EvaluationService.evaluate_interview at 0x111e629d0>
+             └ <app.services.evaluation.EvaluationService object at 0x109182d90>
+
+> File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 255, in evaluate_interview
+    pdf_bytes = self.generate_pdf_report(report)
+                │    │                   └ FeedbackReport(session_id='de019706-0595-4b4f-b23c-2137a8d465b8', estimated_job_role='Frontend Engineer', experience_level='J...
+                │    └ <function EvaluationService.generate_pdf_report at 0x111e62a60>
+                └ <app.services.evaluation.EvaluationService object at 0x109182d90>
+
+  File "/Users/apple/Desktop/stepsai/app/services/evaluation.py", line 472, in generate_pdf_report
+    raise HTTPException(
+          └ <class 'fastapi.exceptions.HTTPException'>
+
+fastapi.exceptions.HTTPException: 500: An error occurred while compiling the PDF layout: 'FeedbackReport' object has no attribute 'improvement_tips'
+2026-05-25 16:27:27.267 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 502 Bad Gateway"
+2026-05-25 16:27:27.306 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:27:43.269 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:27:43.371 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:27:43.698 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:27:43.701 | INFO     | uvicorn.server:_serve:84 - Started server process [88394]
+2026-05-25 16:27:43.701 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:27:43.702 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:27:43.703 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:27:54.410 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:27:54.512 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:27:54.845 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:27:54.847 | INFO     | uvicorn.server:_serve:84 - Started server process [88404]
+2026-05-25 16:27:54.847 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:27:54.848 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:27:54.848 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:28:27.546 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:28:27.560 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:28:27.579 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:28:27.619 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:28:34.348 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:28:34.449 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:28:34.775 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:28:34.777 | INFO     | uvicorn.server:_serve:84 - Started server process [88420]
+2026-05-25 16:28:34.777 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:28:34.778 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:28:34.778 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:30:30.128 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:30:30.146 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:30:30.165 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:30:30.166 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/af557e88-cfa7-480c-9abe-055e85cf7f8e "HTTP/1.1 200 OK"
+2026-05-25 16:30:30.169 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:30:30.171 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:30:30.172 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:30:30.174 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:30:30.178 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:30:30.213 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:30:30.216 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:30:30.217 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/1690796f-df8e-4fbd-b586-1947fc294446 "HTTP/1.1 200 OK"
+2026-05-25 16:30:30.219 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:30:33.859 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:30:33.875 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:30:56.366 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:30:56.467 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:30:56.468 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 16:30:56.804 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:30:56.807 | INFO     | uvicorn.server:_serve:84 - Started server process [88448]
+2026-05-25 16:30:56.807 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:30:56.808 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:30:56.808 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:32:06.784 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:32:06.799 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:32:06.816 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.817 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/1e834d61-8736-4430-8101-124b092da562 "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.820 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:32:06.821 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.822 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.824 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:32:06.827 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.830 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.833 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.834 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:204 - Session cb360462-a430-434b-b2ce-be15661a402c: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:32:06.835 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.836 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:32:06.838 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:32:06.841 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.842 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/6c23ff73-062a-4c4f-bdfc-4ffc934d170d "HTTP/1.1 200 OK"
+2026-05-25 16:32:06.843 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:40:18.507 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:40:18.521 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:40:18.538 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:40:18.540 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/ec6c8932-8723-4866-bc48-73e3998c9c5e "HTTP/1.1 200 OK"
+2026-05-25 16:40:18.542 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:42:22.708 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:42:22.724 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:42:22.727 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:42:22.730 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:42:22.731 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:204 - Session 30103475-c275-4441-88e1-1f3a2ebce8c5: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:42:22.733 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:42:22.734 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:42:28.692 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:42:28.793 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:42:29.122 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:42:29.125 | INFO     | uvicorn.server:_serve:84 - Started server process [88504]
+2026-05-25 16:42:29.125 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:42:29.126 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:42:29.126 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:43:03.570 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:43:03.672 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:43:04.001 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:43:04.004 | INFO     | uvicorn.server:_serve:84 - Started server process [88517]
+2026-05-25 16:43:04.004 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:43:04.005 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:43:04.005 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:43:43.879 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:43:43.891 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:43:43.910 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:43:43.948 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:43:53.403 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:43:53.504 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:43:53.831 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:43:53.834 | INFO     | uvicorn.server:_serve:84 - Started server process [88533]
+2026-05-25 16:43:53.834 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:43:53.835 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:43:53.836 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:44:00.194 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:44:00.206 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:44:00.225 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:44:00.227 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/5f316532-c5b5-4099-b497-874ff8b5802d "HTTP/1.1 200 OK"
+2026-05-25 16:44:00.229 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:44:05.101 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:44:05.117 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:44:05.135 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.137 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/c5477bcd-1632-4b7a-afc2-1c8f5dfd3937 "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.139 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:44:05.140 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.142 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.144 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:44:05.148 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.151 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.153 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.155 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:204 - Session face01de-bfed-4c1b-97ff-7d049ea80400: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:44:05.156 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.157 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:44:05.160 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:44:05.163 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.164 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/75cc8258-33bd-4159-9025-9544d2d6bd09 "HTTP/1.1 200 OK"
+2026-05-25 16:44:05.166 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:47:46.082 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:47:46.183 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:47:46.523 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:47:46.525 | INFO     | uvicorn.server:_serve:84 - Started server process [88570]
+2026-05-25 16:47:46.525 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:47:46.526 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:47:46.526 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:47:49.957 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:47:50.058 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:47:50.386 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:47:50.389 | INFO     | uvicorn.server:_serve:84 - Started server process [88579]
+2026-05-25 16:47:50.389 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:47:50.390 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:47:50.390 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:48:01.200 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:48:01.302 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:48:01.633 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:48:01.636 | INFO     | uvicorn.server:_serve:84 - Started server process [88587]
+2026-05-25 16:48:01.636 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:48:01.637 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:48:01.637 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:48:09.416 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:48:09.517 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:48:09.844 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:48:09.847 | INFO     | uvicorn.server:_serve:84 - Started server process [88596]
+2026-05-25 16:48:09.847 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:48:09.848 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:48:09.848 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:48:14.191 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:48:14.293 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:48:14.624 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:48:14.626 | INFO     | uvicorn.server:_serve:84 - Started server process [88603]
+2026-05-25 16:48:14.626 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:48:14.627 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:48:14.627 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:48:21.494 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:48:21.595 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:48:21.925 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:48:21.928 | INFO     | uvicorn.server:_serve:84 - Started server process [88610]
+2026-05-25 16:48:21.928 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:48:21.929 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:48:21.929 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:48:29.707 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:48:29.808 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:48:30.145 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:48:30.148 | INFO     | uvicorn.server:_serve:84 - Started server process [88621]
+2026-05-25 16:48:30.148 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:48:30.149 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:48:30.149 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:49:38.234 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:49:38.251 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:49:38.272 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.274 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/63e34aa4-9ba5-4cab-9306-205fb5b61a49 "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.275 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:49:38.277 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.279 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.281 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:49:38.284 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.287 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.289 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.290 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:204 - Session 1b2d4bd4-8244-4ad1-8724-ae43f1836ec5: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:49:38.292 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.293 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:49:38.295 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:49:38.298 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.299 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/93b59bf0-590b-41a3-81b3-ba8aea6fbbe9 "HTTP/1.1 200 OK"
+2026-05-25 16:49:38.301 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:49:47.721 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:49:47.823 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:49:48.173 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:49:48.175 | INFO     | uvicorn.server:_serve:84 - Started server process [88696]
+2026-05-25 16:49:48.175 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:49:48.176 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:49:48.177 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:49:53.938 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:49:54.039 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:49:54.040 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 16:50:08.004 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:50:08.007 | INFO     | uvicorn.server:_serve:84 - Started server process [88712]
+2026-05-25 16:50:08.007 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:50:08.008 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:50:08.008 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:50:55.921 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:50:55.937 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:50:55.958 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.959 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/8a379bba-8948-43ac-b791-7e915a352859 "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.961 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:50:55.962 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.964 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.967 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:50:55.970 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.972 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.975 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.976 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:204 - Session 0c6ab972-3ddc-458d-8fb1-2fb02e49c4cc: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:50:55.977 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.978 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:50:55.981 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:50:55.983 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.984 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/a5862e73-d61e-406c-bfd1-cf9f049c9ba3 "HTTP/1.1 200 OK"
+2026-05-25 16:50:55.986 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:53:24.869 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:53:24.886 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:53:24.906 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.907 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/40baf1a5-af5d-4d6a-9519-e7f93b4ee479 "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.910 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:53:24.911 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.913 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.915 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:53:24.919 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.922 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.925 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.926 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:204 - Session 80c46df9-c831-4473-8d5c-e9ca085a2230: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:53:24.927 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.928 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:53:24.931 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:53:24.933 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.935 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/20c4212c-c3db-4572-a5b4-e6e7c2d06914 "HTTP/1.1 200 OK"
+2026-05-25 16:53:24.936 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:54:41.795 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:54:41.897 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:54:42.281 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:54:42.283 | INFO     | uvicorn.server:_serve:84 - Started server process [88753]
+2026-05-25 16:54:42.283 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:54:42.284 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:54:42.285 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:54:51.578 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:54:51.679 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:54:52.021 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:54:52.023 | INFO     | uvicorn.server:_serve:84 - Started server process [88764]
+2026-05-25 16:54:52.024 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:54:52.024 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:54:52.025 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:54:57.878 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:54:57.980 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:54:58.315 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:54:58.318 | INFO     | uvicorn.server:_serve:84 - Started server process [88773]
+2026-05-25 16:54:58.318 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:54:58.319 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:54:58.319 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:55:10.336 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:55:10.437 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:55:10.776 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:55:10.779 | INFO     | uvicorn.server:_serve:84 - Started server process [88780]
+2026-05-25 16:55:10.779 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:55:10.780 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:55:10.780 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:55:19.162 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:55:19.263 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:55:19.593 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:55:19.595 | INFO     | uvicorn.server:_serve:84 - Started server process [88789]
+2026-05-25 16:55:19.595 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:55:19.596 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:55:19.596 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:55:38.186 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:55:38.287 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:55:38.615 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:55:38.618 | INFO     | uvicorn.server:_serve:84 - Started server process [88801]
+2026-05-25 16:55:38.618 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:55:38.619 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:55:38.619 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:55:46.197 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:55:46.298 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:55:46.632 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:55:46.634 | INFO     | uvicorn.server:_serve:84 - Started server process [88810]
+2026-05-25 16:55:46.634 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:55:46.635 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:55:46.636 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:56:13.510 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:56:13.611 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:56:13.939 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:56:13.942 | INFO     | uvicorn.server:_serve:84 - Started server process [88824]
+2026-05-25 16:56:13.942 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:56:13.943 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:56:13.944 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:56:21.209 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:56:21.234 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:56:21.251 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.253 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/39cd38f8-2dd8-4964-a64d-a8ab94b9243d "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.255 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:56:21.256 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.258 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.260 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:56:21.264 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.267 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.269 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.271 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 818213cf-6c01-4432-972d-a55ca6b78b55: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:56:21.272 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.274 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:56:21.291 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.346 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:56:21.349 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.350 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/a7de7129-030c-4a60-9161-30b2b875fbd2 "HTTP/1.1 200 OK"
+2026-05-25 16:56:21.352 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:56:28.906 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:56:29.008 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:56:29.339 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:56:29.342 | INFO     | uvicorn.server:_serve:84 - Started server process [88840]
+2026-05-25 16:56:29.342 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:56:29.343 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:56:29.344 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 16:56:38.345 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:56:38.366 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 16:56:38.383 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.385 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/cd2cc07e-4a56-45fe-a49e-477eca4e1ddc "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.387 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 16:56:38.389 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.394 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.403 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 16:56:38.415 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.424 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.435 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.441 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 0b8a9408-f933-4a2c-904a-bae69dfb1ce4: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 16:56:38.442 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.444 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 16:56:38.473 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.475 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.476 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 12cba6b8-f8e9-40a4-8a47-b834849ef75a: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 16:56:38.477 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.480 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 16:56:38.483 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.484 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/7c495b2e-cb77-42ea-b961-1435aa80222e "HTTP/1.1 200 OK"
+2026-05-25 16:56:38.486 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 16:59:57.909 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 16:59:58.010 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 16:59:58.353 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 16:59:58.356 | INFO     | uvicorn.server:_serve:84 - Started server process [88862]
+2026-05-25 16:59:58.356 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 16:59:58.357 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 16:59:58.357 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:00:06.239 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:00:06.340 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:00:06.341 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 17:00:06.683 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:00:06.686 | INFO     | uvicorn.server:_serve:84 - Started server process [88873]
+2026-05-25 17:00:06.686 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:00:06.687 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 17:00:06.687 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:01:11.130 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:01:11.149 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:01:11.167 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.169 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/cf7d868f-3061-4ae8-b4a4-73b75158aa5a "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.171 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:01:11.172 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.174 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.176 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:01:11.179 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.182 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.185 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.186 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 69b13f83-2561-4742-8a35-a927e9a7418a: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:01:11.188 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.189 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:01:11.192 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.194 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.195 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 4602be2b-d9d9-4a26-b81a-b2342eb41639: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:01:11.196 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.199 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:01:11.201 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.203 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/6503cb40-e0d5-4013-8c6b-fd75880763ac "HTTP/1.1 200 OK"
+2026-05-25 17:01:11.204 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 17:01:48.627 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:01:48.728 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:01:49.068 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:01:49.071 | INFO     | uvicorn.server:_serve:84 - Started server process [88899]
+2026-05-25 17:01:49.071 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:01:49.072 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 17:01:49.072 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:02:01.898 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:02:01.999 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:02:02.332 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:02:02.334 | INFO     | uvicorn.server:_serve:84 - Started server process [88909]
+2026-05-25 17:02:02.335 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:02:02.336 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 17:02:02.336 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:02:10.718 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:02:10.819 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:02:11.153 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:02:11.156 | INFO     | uvicorn.server:_serve:84 - Started server process [88919]
+2026-05-25 17:02:11.156 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:02:11.157 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 17:02:11.157 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:02:22.678 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:02:22.780 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:02:23.109 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:02:23.112 | INFO     | uvicorn.server:_serve:84 - Started server process [88927]
+2026-05-25 17:02:23.112 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:02:23.113 | INFO     | app.core.db:init_db:57 - SQLite database successfully initialized and verified!
+2026-05-25 17:02:23.114 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:03:56.015 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:03:56.040 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:03:56.071 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.072 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/af4f21f2-1d39-4186-920a-d91ca99cb83b "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.074 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:03:56.076 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.077 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.079 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:03:56.083 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.086 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.088 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.089 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 498188fb-c011-4de9-beeb-db37867ffff5: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:03:56.091 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.092 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:03:56.095 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.097 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.098 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 8be763a2-b3b2-47e3-8ed7-8bf8cde403f4: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:03:56.099 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.102 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.104 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/interview/status/20825c4d-5e41-44db-80fd-b45b7f76277d "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.106 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:03:56.109 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.110 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/f1b87cd2-9403-4deb-8885-0be96c390042 "HTTP/1.1 200 OK"
+2026-05-25 17:03:56.111 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 17:05:07.985 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:05:08.087 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:05:08.459 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:05:08.464 | INFO     | uvicorn.server:_serve:84 - Started server process [88950]
+2026-05-25 17:05:08.464 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:05:08.466 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:05:08.466 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:05:21.299 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:05:21.400 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:05:21.728 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:05:21.731 | INFO     | uvicorn.server:_serve:84 - Started server process [88961]
+2026-05-25 17:05:21.731 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:05:21.732 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:05:21.733 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:05:31.023 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:05:31.124 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:05:31.456 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:05:31.459 | INFO     | uvicorn.server:_serve:84 - Started server process [88970]
+2026-05-25 17:05:31.459 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:05:31.460 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:05:31.460 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:08:55.905 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:08:55.921 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:08:55.943 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.945 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/2da13d31-b5be-48cb-9ecd-c43b75322e0a "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.947 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:08:55.948 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.950 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.952 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:08:55.956 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.959 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.961 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.963 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 7fa2776d-461a-4e76-92ba-4ac5f0ced9e0: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:08:55.964 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.965 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:08:55.969 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.971 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.972 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session d2005eef-4669-4e02-bea9-0f6801bc0c96: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:08:55.973 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.976 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.978 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/interview/status/28499d46-7561-4756-bca5-96cca285582f "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.981 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:08:55.983 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.985 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/db974732-5a39-4ece-9ecb-98152443b074 "HTTP/1.1 200 OK"
+2026-05-25 17:08:55.987 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:07.149 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:11:07.165 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:07.182 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.183 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/3cea2ebd-3db9-4134-8782-69a172b45a01 "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.185 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:07.186 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.188 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.190 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:07.193 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.195 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.198 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.199 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 9898b823-2ee2-4650-83c2-300a96c0a889: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:11:07.200 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.201 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:11:07.204 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.206 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.207 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 8bfd06ec-dada-442f-8a30-cfbc635f98e9: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:11:07.208 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.211 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.213 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/interview/status/b19bc64c-0d66-4028-8379-35d83daa1006 "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.215 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:11:07.217 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.219 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/a1a7257d-82b3-474e-95a0-bbe8114d53a8 "HTTP/1.1 200 OK"
+2026-05-25 17:11:07.220 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:24.994 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:11:25.095 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:11:25.446 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:11:25.449 | INFO     | uvicorn.server:_serve:84 - Started server process [89006]
+2026-05-25 17:11:25.449 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:11:25.450 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:11:25.450 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:11:38.459 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:11:38.478 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:38.496 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.497 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/9a779609-f34b-4317-aa03-52aefaf4159c "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.499 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:38.500 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.502 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.504 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:38.507 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.510 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.513 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.514 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 9742fa0a-657d-46fd-b438-c8bd92de770d: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:11:38.515 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.516 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:11:38.519 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.521 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.522 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session b425d420-ec27-48ab-8def-1e8f23228fc2: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:11:38.523 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.526 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.528 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/interview/status/fdfa8992-6a2b-4ae3-958a-21446a196f40 "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.530 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.532 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:11:38.534 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.536 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/43645410-68bf-4b12-a2cc-24e2f0b99858 "HTTP/1.1 200 OK"
+2026-05-25 17:11:38.537 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 17:11:44.133 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:11:44.235 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:11:44.566 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:11:44.569 | INFO     | uvicorn.server:_serve:84 - Started server process [89027]
+2026-05-25 17:11:44.569 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:11:44.570 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:11:44.570 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:11:51.238 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:11:51.339 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:11:51.683 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:11:51.686 | INFO     | uvicorn.server:_serve:84 - Started server process [89036]
+2026-05-25 17:11:51.686 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:11:51.687 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:11:51.688 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:11:57.955 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:11:58.056 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:11:58.393 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:11:58.396 | INFO     | uvicorn.server:_serve:84 - Started server process [89043]
+2026-05-25 17:11:58.396 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:11:58.397 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:11:58.397 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:12:04.658 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:12:04.760 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:12:05.096 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:12:05.099 | INFO     | uvicorn.server:_serve:84 - Started server process [89050]
+2026-05-25 17:12:05.100 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:12:05.101 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:12:05.101 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:13:35.828 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:13:35.845 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:13:35.864 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.866 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/b9364d93-9993-4563-9c2a-5808f62f5847 "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.868 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:13:35.869 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.871 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.873 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:13:35.876 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.879 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.882 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.883 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session ce98937a-ab51-4a25-987b-766dd08bb182: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:13:35.884 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.886 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:13:35.889 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.891 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.892 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:220 - Session 3c767381-6054-4368-8ce6-fc9b72cf5e3d: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:13:35.893 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.896 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.898 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/interview/status/55313ab9-966d-4d81-a6ee-231b9101324c "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.900 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.902 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:13:35.904 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.906 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/7c860400-3417-4f73-9fc9-629f156b1351 "HTTP/1.1 200 OK"
+2026-05-25 17:13:35.907 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 17:14:43.192 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:14:43.294 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:14:43.295 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 17:14:43.638 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:14:43.641 | INFO     | uvicorn.server:_serve:84 - Started server process [89084]
+2026-05-25 17:14:43.641 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:14:43.642 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:14:43.642 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:14:50.410 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:14:50.512 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:14:50.857 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:14:50.860 | INFO     | uvicorn.server:_serve:84 - Started server process [89095]
+2026-05-25 17:14:50.860 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:14:50.861 | INFO     | app.core.db:init_db:62 - SQLite database successfully initialized and verified!
+2026-05-25 17:14:50.861 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:14:53.084 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:14:53.186 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:14:53.515 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:14:53.518 | INFO     | uvicorn.server:_serve:84 - Started server process [89100]
+2026-05-25 17:14:53.518 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:14:53.519 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:14:53.519 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:14:57.560 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:14:57.662 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:14:57.992 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:14:57.995 | INFO     | uvicorn.server:_serve:84 - Started server process [89107]
+2026-05-25 17:14:57.995 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:14:57.996 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:14:57.996 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:04.157 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:04.259 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:04.592 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:04.595 | INFO     | uvicorn.server:_serve:84 - Started server process [89114]
+2026-05-25 17:15:04.595 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:04.596 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:04.596 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:11.266 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:11.367 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:11.368 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 17:15:11.697 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:11.701 | INFO     | uvicorn.server:_serve:84 - Started server process [89123]
+2026-05-25 17:15:11.701 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:11.702 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:11.702 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:18.370 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:18.472 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:18.805 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:18.808 | INFO     | uvicorn.server:_serve:84 - Started server process [89130]
+2026-05-25 17:15:18.808 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:18.809 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:18.810 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:26.790 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:26.891 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:27.227 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:27.230 | INFO     | uvicorn.server:_serve:84 - Started server process [89137]
+2026-05-25 17:15:27.230 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:27.231 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:27.232 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:33.495 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:33.596 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:33.986 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:33.989 | INFO     | uvicorn.server:_serve:84 - Started server process [89146]
+2026-05-25 17:15:33.989 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:33.990 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:33.990 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:37.933 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:38.034 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:38.381 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:38.384 | INFO     | uvicorn.server:_serve:84 - Started server process [89153]
+2026-05-25 17:15:38.385 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:38.386 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:38.386 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:44.651 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:44.752 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:45.094 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:45.097 | INFO     | uvicorn.server:_serve:84 - Started server process [89160]
+2026-05-25 17:15:45.097 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:45.098 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:45.098 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:51.767 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:51.868 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:52.206 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:52.209 | INFO     | uvicorn.server:_serve:84 - Started server process [89167]
+2026-05-25 17:15:52.209 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:52.210 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:52.210 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:15:57.058 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:15:57.160 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:15:57.532 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:15:57.535 | INFO     | uvicorn.server:_serve:84 - Started server process [89174]
+2026-05-25 17:15:57.535 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:15:57.536 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:15:57.536 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:04.101 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:04.202 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:04.547 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:04.550 | INFO     | uvicorn.server:_serve:84 - Started server process [89183]
+2026-05-25 17:16:04.551 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:04.552 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:04.552 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:11.120 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:11.222 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:11.554 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:11.558 | INFO     | uvicorn.server:_serve:84 - Started server process [89190]
+2026-05-25 17:16:11.558 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:11.559 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:11.559 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:18.530 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:18.631 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:18.968 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:18.971 | INFO     | uvicorn.server:_serve:84 - Started server process [89198]
+2026-05-25 17:16:18.972 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:18.973 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:18.973 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:25.640 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:25.742 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:26.081 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:26.084 | INFO     | uvicorn.server:_serve:84 - Started server process [89207]
+2026-05-25 17:16:26.084 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:26.085 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:26.086 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:32.754 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:32.856 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:33.202 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:33.206 | INFO     | uvicorn.server:_serve:84 - Started server process [89214]
+2026-05-25 17:16:33.207 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:33.208 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:33.208 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:36.846 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:36.947 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:37.284 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:37.288 | INFO     | uvicorn.server:_serve:84 - Started server process [89221]
+2026-05-25 17:16:37.288 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:37.289 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:37.289 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:41.736 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:41.837 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:41.838 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-05-25 17:16:42.170 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:42.173 | INFO     | uvicorn.server:_serve:84 - Started server process [89228]
+2026-05-25 17:16:42.174 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:42.175 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:42.175 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:46.517 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:46.618 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:46.952 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:46.955 | INFO     | uvicorn.server:_serve:84 - Started server process [89235]
+2026-05-25 17:16:46.955 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:46.956 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:46.956 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:50.997 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:51.099 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:51.434 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:51.437 | INFO     | uvicorn.server:_serve:84 - Started server process [89242]
+2026-05-25 17:16:51.438 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:51.439 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:51.439 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:55.376 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:55.477 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:16:55.817 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:16:55.820 | INFO     | uvicorn.server:_serve:84 - Started server process [89249]
+2026-05-25 17:16:55.820 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:16:55.821 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:16:55.821 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:16:59.863 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:16:59.964 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:17:00.293 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:17:00.297 | INFO     | uvicorn.server:_serve:84 - Started server process [89256]
+2026-05-25 17:17:00.297 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:17:00.298 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:17:00.298 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:17:04.339 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:17:04.440 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:17:04.779 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:17:04.782 | INFO     | uvicorn.server:_serve:84 - Started server process [89261]
+2026-05-25 17:17:04.783 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:17:04.784 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:17:04.784 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:17:08.827 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:17:08.928 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:17:09.262 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:17:09.265 | INFO     | uvicorn.server:_serve:84 - Started server process [89264]
+2026-05-25 17:17:09.265 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:17:09.266 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:17:09.266 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:17:13.307 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:17:13.408 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:17:13.754 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:17:13.757 | INFO     | uvicorn.server:_serve:84 - Started server process [89271]
+2026-05-25 17:17:13.758 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:17:13.759 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:17:13.759 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:18:05.799 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:18:05.900 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:18:06.227 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:18:06.230 | INFO     | uvicorn.server:_serve:84 - Started server process [89285]
+2026-05-25 17:18:06.230 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:18:06.231 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:18:06.231 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:21:12.844 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:21:12.945 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:21:13.276 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:21:13.279 | INFO     | uvicorn.server:_serve:84 - Started server process [89305]
+2026-05-25 17:21:13.279 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:21:13.280 | INFO     | app.core.db:init_db:69 - SQLite database successfully initialized and verified!
+2026-05-25 17:21:13.280 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:21:32.366 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:21:32.468 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:21:32.802 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:21:32.805 | INFO     | uvicorn.server:_serve:84 - Started server process [89319]
+2026-05-25 17:21:32.805 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:21:32.807 | INFO     | app.core.db:init_db:173 - Initializing SQLite schema...
+2026-05-25 17:21:32.809 | INFO     | app.core.db:init_db:232 - SQLite database schema successfully initialized and verified!
+2026-05-25 17:21:32.809 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:21:44.022 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:21:44.067 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:21:44.084 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.086 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/e4fe499a-f857-4d12-8922-d4f48207d975 "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.088 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:21:44.089 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.091 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.093 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:21:44.097 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.100 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.102 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.104 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:227 - Session 3f284362-c85a-467f-9e96-30b805f7367c: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:21:44.105 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.106 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:21:44.110 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.112 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.113 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:227 - Session 3a422070-f522-4d78-b4cf-5ef181369d5b: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:21:44.114 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.117 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.119 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/interview/status/3f844842-0653-4260-9bfd-61e5a642da8f "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.121 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.123 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:21:44.125 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.127 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/2c44b29d-8261-4426-a4dd-469d260b3576 "HTTP/1.1 200 OK"
+2026-05-25 17:21:44.128 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
+2026-05-25 17:27:39.279 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:27:39.380 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:27:39.717 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:27:39.720 | INFO     | uvicorn.server:_serve:84 - Started server process [89366]
+2026-05-25 17:27:39.720 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:27:39.722 | INFO     | app.core.db:init_db:173 - Initializing SQLite schema...
+2026-05-25 17:27:39.723 | INFO     | app.core.db:init_db:232 - SQLite database schema successfully initialized and verified!
+2026-05-25 17:27:39.723 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:27:45.883 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2026-05-25 17:27:45.984 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-05-25 17:27:46.314 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:27:46.318 | INFO     | uvicorn.server:_serve:84 - Started server process [89377]
+2026-05-25 17:27:46.318 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 17:27:46.319 | INFO     | app.core.db:init_db:173 - Initializing SQLite schema...
+2026-05-25 17:27:46.320 | INFO     | app.core.db:init_db:232 - SQLite database schema successfully initialized and verified!
+2026-05-25 17:27:46.320 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 17:28:00.264 | INFO     | app.core.logging:setup_logging:67 - Structured Loguru logging has been successfully initialized!
+2026-05-25 17:28:00.282 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 17:28:00.299 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.300 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/fd7efb3b-1ff4-401b-8dbf-78fc304e8110 "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.302 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 17:28:00.304 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.305 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.307 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 17:28:00.310 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.313 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.315 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.316 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:227 - Session 394665a0-7c12-4a6f-8cff-b25864543cdf: decreased difficulty to Mid due to brief answer (39 chars).
+2026-05-25 17:28:00.318 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.319 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 17:28:00.322 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.324 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.325 | INFO     | app.services.interview_engine:_adapt_difficulty_tier:227 - Session 63b2ba48-a238-4176-9557-afaac47297af: decreased difficulty to Mid due to brief answer (38 chars).
+2026-05-25 17:28:00.326 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.329 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.331 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/interview/status/8e50ea77-6a16-4f55-99fd-815fafca70df "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.332 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.335 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 17:28:00.337 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.339 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/d55fa7d1-0918-4ad1-a4cf-2441d1abcc38 "HTTP/1.1 200 OK"
+2026-05-25 17:28:00.340 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"

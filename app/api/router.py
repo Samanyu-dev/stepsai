@@ -1,3 +1,10 @@
+"""
+Steps AI Router Configuration Module.
+
+This module consolidates all API sub-routers (health, resume parsing, interview
+engine, and performance evaluation endpoints) under a unified FastAPI APIRouter structure.
+"""
+
 from fastapi import APIRouter
 from app.api.v1 import health, resume, interview, evaluation
 

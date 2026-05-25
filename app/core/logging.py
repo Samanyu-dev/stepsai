@@ -1,3 +1,10 @@
+"""
+Steps AI Logging Infrastructure.
+
+This module configures unified, thread-safe, and asynchronous-friendly structured
+logging powered by Loguru. It intercepts standard logging and manages rotation.
+"""
+
 import logging
 import sys
 from loguru import logger
