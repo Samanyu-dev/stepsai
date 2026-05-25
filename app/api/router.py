@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api.v1 import health, resume, interview
+from app.api.v1 import health, resume, interview, evaluation
 
 # Master router for all API endpoints
 api_router = APIRouter()
@@ -8,3 +8,4 @@ api_router = APIRouter()
 api_router.include_router(health.router, prefix="/v1")
 api_router.include_router(resume.router, prefix="/v1/resume")
 api_router.include_router(interview.router, prefix="/v1/interview")
+api_router.include_router(evaluation.router, prefix="/v1")

@@ -90,7 +90,7 @@ The pipeline consists of four key phases:
 - [x] **Resume Intelligence**: Multi-format PDF and Word DOCX parsing and structured Groq JSON profiling (Phase 2)
 - [x] **Resume Session Stores**: Cache parsed candidate details in-memory, retrievable via GET `/resume/{session_id}` (Phase 2)
 - [x] **Conversational Recruiter SSE Stream**: Multi-turn dialogue with real-time SSE streaming, supporting HR, Technical, and Behavioral modes across Junior, Mid, and Senior difficulty levels (Phase 3)
-- [ ] **Rubric Grading & PDF Export**: Detailed performance sheets with visual scores (Phase 4)
+- [x] **Rubric Grading & PDF Export**: Detailed performance sheets with visual scores (Phase 4)
 - [ ] **Docker containerization & structured logs** (Phase 5)
 
 ---
