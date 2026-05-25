@@ -31,55 +31,63 @@ An advanced, enterprise-grade AI-powered Mock Interview system developed for the
 
 ## 🛠️ Tech Stack Used
 
+### 🧠 Backend (FastAPI Python Service)
 - **Core Framework**: [FastAPI](https://fastapi.tiangolo.com/) (High-performance Python Web Framework)
 - **Generative AI & LLM Engine**: [Groq llama-3.3-70b-versatile](https://console.groq.com/) (Free Tier, ultra-low latency)
 - **PDF Extraction**: [PyMuPDF / fitz](https://pymupdf.readthedocs.io/) (Ultra-fast PDF text parsing)
 - **DOCX Extraction**: [python-docx](https://python-docx.readthedocs.io/) (Structured Word Document parsing)
 - **Data Validation & Settings**: [Pydantic V2 & Pydantic-Settings](https://docs.pydantic.dev/)
 - **Testing Suite**: [Pytest](https://docs.pytest.org/) & [HTTPX](https://www.python-httpx.org/) (Async testing)
+- **Structured Telemetry Logging**: [Loguru](https://github.com/Delgan/loguru) (Async-safe, colorized rotating and compressed logs)
 - **Process Manager / Server**: [Uvicorn](https://www.uvicorn.org/)
+
+### 🎨 Frontend (Next.js Premium Client)
+- **Core Framework**: [Next.js 16 (React 19 App Router)](https://nextjs.org/) (Production-grade SSR & SPA)
+- **Layout & Styling**: [Tailwind CSS 4](https://tailwindcss.com/) (Next-generation utility CSS engine)
+- **High-Performance Animations**: [GSAP (GreenSock Animation Platform)](https://greensock.com/gsap/) (Stunning, hardware-accelerated transitions & motion design)
+- **Interactive UI Icons**: [Lucide React](https://lucide.dev/) (Sleek pixel-perfect SVG vectors)
 
 ---
 
-## 🏗️ Backend Architecture & System Design
+## 🏗️ System Architecture & Design
 
-The system is built on clean, modular, and testable design principles, decoupling network request layers, business workflows, and external service providers:
+The platform is designed around a decoupled, service-oriented architecture. The Next.js frontend communicates directly with the FastAPI REST controllers, rendering dynamic SSE streams and fetching compiled report PDFs seamlessly.
 
 ```mermaid
 graph TD
-    Client[HTTP Client / API Consumer] -->|REST API Request| FastAPI[FastAPI App / main.py]
-    FastAPI -->|Routing| Routers[API Routers: app/api]
-    
-    subgraph "Core Business Services"
-        Routers -->|Parse PDF/DOCX| Parser[Resume Parser Service]
-        Routers -->|Manage Conversation| Engine[Interview Engine Service]
-        Routers -->|Analyze Responses| Evaluator[Evaluation Service]
-    end
-    
-    subgraph "Integrations & State"
-        Parser -->|Raw Context| LLMService[LLM Service Interface]
-        Engine -->|Prompt Template / SSE Chat| LLMService
-        Evaluator -->|Rubric Analysis| LLMService
+    Client[Next.js Premium Frontend: port 3000] -->|Upload PDF/DOCX| API_Resume[POST /api/v1/resume/upload]
+    Client -->|Launch Mode Mock Session| API_Start[POST /api/v1/interview/start]
+    Client -->|Answer Question SSE Stream| API_Answer[POST /api/v1/interview/answer]
+    Client -->|End and evaluate session| API_End[POST /api/v1/interview/end]
+    Client -->|Download PDF report| API_Report[GET /api/v1/report/{session_id}]
+
+    subgraph "FastAPI Backend: port 8000"
+        API_Resume --> Parser[PyMuPDF & python-docx]
+        API_Start --> Engine[Interview Engine]
+        API_Answer --> Engine
+        API_End --> Evaluator[Groq JSON Grader]
+        API_Report --> Evaluator
         
-        LLMService -->|API Call| Groq[Groq Llama 3.3 70B / LLM]
+        Parser --> ResumeStore[InMemory Resume Cache]
+        Engine --> InterviewStore[InMemory Dialogue Cache]
         
-        Parser -->|Cache Profile| ResumeStore[In-Memory Resume Store]
-        Engine -->|Save/Restore Session| Store[In-Memory Interview Store]
+        Parser --> LLM[Groq Llama 3.3 70B Service]
+        Engine --> LLM
+        Evaluator --> LLM
     end
-    
-    FastAPI -->|Config Injection| Settings[Pydantic Settings]
 ```
 
 ---
 
 ## ⚙️ Implementation Approach & Workflow
 
-The pipeline consists of four key phases:
+The platform delivers a 100% complete, context-aware interview preparation loop:
 
-1. **Resume Ingestion & Caching**: The candidate uploads their resume (PDF or DOCX). `PyMuPDF` or `python-docx` extracts the raw text. It is passed to Groq llama-3.3 using JSON Mode, returning a clean, validated JSON schema containing skills, experiences, and estimated job roles. This profile is stored in an in-memory session cache mapped to a unique `session_id`.
-2. **Personalized Session Launch**: The candidate starts the mock interview via `/interview/start` selecting a mode (`HR`, `Technical`, `Behavioral`) and difficulty level. The engine retrieves their parsed resume from the session cache and returns the first question (Q1).
-3. **SSE Streaming Conversation**: Candidate responses are submitted to `/interview/answer`. The engine retrieves history, invokes Groq, and yields recruiter follow-ups and next questions in real-time using Server-Sent Events (`text/event-stream`).
-4. **Multi-Dimensional Grading**: Individual answers are graded (1-10) for clarity, technical depth, and relevance. A compiled PDF report outlines gaps and growth areas.
+1. **Resume Intelligence (Phase 2)**: Candidate uploads their resume. `PyMuPDF` or `python-docx` extracts raw text. A Groq JSON schema parser profiles details (skills, roles, experience years, strengths) and caches them in memory.
+2. **recruiter Alex Syllabus (Phase 3)**: Candidate enters the room after choosing mode (`HR`, `Technical`, `Behavioral`) and difficulty. Recruiter Alex automatically detects experience levels and welcomes them with the first custom question.
+3. **SSE Conversational Room (Phase 3 & 5)**: Answers are submitted. Telemetry streams tokens letter-by-letter back to the Next.js screen via Server-Sent Events (`text/event-stream`). GSAP renders characters in fluid fades.
+4. **Performance Diagnostics & PDF Report (Phase 4)**: Groq grades each conversation turn on a 1-10 scale (Communication Clarity, Technical Depth, Relevance, Confidence). `fpdf2` compiles this into a custom-branded assessment PDF ready for download.
+5. **Loguru Interceptors & Docker Compose (Phase 5)**: Standard logging outputs colored live traces and writes weekly rotating logs under `/logs`. The multi-container setup launches the entire stack in one command.
 
 ---
 
@@ -91,7 +99,9 @@ The pipeline consists of four key phases:
 - [x] **Resume Session Stores**: Cache parsed candidate details in-memory, retrievable via GET `/resume/{session_id}` (Phase 2)
 - [x] **Conversational Recruiter SSE Stream**: Multi-turn dialogue with real-time SSE streaming, supporting HR, Technical, and Behavioral modes across Junior, Mid, and Senior difficulty levels (Phase 3)
 - [x] **Rubric Grading & PDF Export**: Detailed performance sheets with visual scores (Phase 4)
-- [ ] **Docker containerization & structured logs** (Phase 5)
+- [x] **Next.js Premium SPA**: Responsive Dark Cosmic design with glassmorphism, glowing custom scorecards, pulsating audio visualizers, and GSAP reveals (Phase 5)
+- [x] **Rotating Loguru Logs**: Active interceptor rerouting standard python and uvicorn traces into rotating logs under `logs/stepsai.log` (Phase 5)
+- [x] **Docker containerization**: Discrete Dockerfiles for both services and parent orchestrating `docker-compose.yml` (Phase 5)
 
 ---
 
@@ -112,53 +122,62 @@ Create a `.env` file in the root directory based on `.env.example`:
 
 ## 🚀 Setup Instructions to Run Locally
 
-### 1. Prerequisites
-- Python 3.11 or higher
-- Git
+### Option A: Running via Docker Compose (Recommended)
+Make sure you have [Docker](https://www.docker.com/) running on your system, then build and boot both tiers:
+```bash
+docker-compose up --build
+```
+- Open `http://localhost:3000` to interact with the premium Next.js dashboard.
+- Open `http://localhost:8000/docs` to access the interactive FastAPI Swagger specs.
 
-### 2. Installation Steps
+---
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/stepsai.git
-   cd stepsai
-   ```
+### Option B: Running Local Services Individually
 
-2. **Create a Virtual Environment**:
+#### 1. Setup Backend API
+1. **Initialize virtual environment**:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
-
-3. **Install Dependencies**:
+2. **Install requirements**:
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
-
-4. **Setup Environment**:
+3. **Configure environment**:
    ```bash
    cp .env.example .env
-   # Open .env and insert your GROQ_API_KEY
+   # Insert your Groq API Key inside .env
    ```
-
-5. **Start the Application**:
+4. **Boot FastAPI application**:
    ```bash
    uvicorn app.main:app --reload
    ```
-   
-   The server will start running at `http://127.0.0.1:8000`.
 
-6. **Interactive Documentation**:
-   - Access Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-   - Access Redoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+#### 2. Setup Next.js Frontend
+1. **Navigate to folder**:
+   ```bash
+   cd frontend
+   ```
+2. **Install node modules**:
+   ```bash
+   npm install
+   ```
+3. **Run Next.js dev server**:
+   ```bash
+   npm run dev
+   ```
+4. **Open in browser**:
+   Navigate to `http://localhost:3000`.
 
 ---
 
 ## 🧪 Running Automated Tests
 
-We use `pytest` for automated test suites:
-
+Make sure your virtual environment is active, then execute:
 ```bash
-pytest
+pytest -v
 ```
+All 10 test cases covering resume parsing, SSE streaming, turn-based dialogue, and PDF generation will run and pass cleanly.
+

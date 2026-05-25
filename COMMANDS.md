@@ -123,7 +123,80 @@ curl -N -X POST -H "Content-Type: application/json" \
 
 ---
 
-## 🐙 5. Version Control Workflow (Git)
+## 🎨 5. Next.js Frontend Operations
+
+Before running frontend commands, make sure you have [Node.js](https://nodejs.org) installed on your system.
+
+### Navigate to Frontend Folder
+```bash
+cd frontend
+```
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Start Development Server
+Launches the Next.js dev server with fast refresh active:
+```bash
+npm run dev
+```
+Open `http://localhost:3000` in your web browser.
+
+### Build for Production
+Prepares a production-optimized build of the React application context:
+```bash
+npm run build
+```
+
+### Run Production Server
+Serves the statically compiled pages:
+```bash
+npm run start
+```
+
+---
+
+## 🐳 6. Multi-Container Orchestration (Docker Compose)
+
+You can run both the FastAPI Python backend and the Next.js frontend simultaneously inside isolated Docker containers.
+
+### Spin up Container Stack (Rebuild & Boot)
+Automatically triggers Docker build for the backend and frontend multi-stage container and exposes them on ports `8000` and `3000` of the host system:
+```bash
+docker-compose up --build
+```
+
+### Run Containers in Background (Detached Mode)
+```bash
+docker-compose up -d --build
+```
+
+### Stop and Remove Containers
+```bash
+docker-compose down
+```
+
+---
+
+## 📝 7. Monitoring Structured Loguru Logs
+
+Logging telemetry is outputted in real-time to both standard terminal output and a rotating file stream.
+
+### Log File Location
+Log files are written locally to:
+`[workspace_root]/logs/stepsai.log`
+
+### Tail Logs in Real-time (Mac / Linux)
+Watch live HTTP routing traffic, transcript analyses, and errors stream in:
+```bash
+tail -f logs/stepsai.log
+```
+
+---
+
+## 🐙 8. Version Control Workflow (Git)
 
 Standard commands to push your work safely to your public GitHub repository:
 
@@ -134,10 +207,11 @@ git add .
 
 ### Commit Phase Changes
 ```bash
-git commit -m "feat: complete active phase"
+git commit -m "feat: complete integrations and structured logging containerized release"
 ```
 
 ### Push to GitHub Remote Main Branch
 ```bash
 git push origin master
 ```
+

@@ -2,6 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.api.router import api_router
+from app.core.logging import setup_logging
+
+# Initialize structured logging
+setup_logging()
 
 # Initialize the FastAPI App with rich OpenAPI metadata
 app = FastAPI(

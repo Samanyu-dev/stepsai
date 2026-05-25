@@ -1,0 +1,21 @@
+2026-05-25 12:06:38.023 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 12:06:38.025 | INFO     | uvicorn.server:_serve:84 - Started server process [87197]
+2026-05-25 12:06:38.026 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-05-25 12:06:38.026 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-05-25 12:24:08.836 | INFO     | app.core.logging:setup_logging:60 - Structured Loguru logging has been successfully initialized!
+2026-05-25 12:24:08.849 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 404 Not Found"
+2026-05-25 12:24:08.869 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/end "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.870 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/d365474c-bf25-4c80-a673-4ec770965b49 "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.873 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/report/some-dummy-id "HTTP/1.1 404 Not Found"
+2026-05-25 12:24:08.875 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.876 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.878 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 404 Not Found"
+2026-05-25 12:24:08.879 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/start "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.881 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.883 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.884 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.885 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/interview/answer "HTTP/1.1 400 Bad Request"
+2026-05-25 12:24:08.887 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 400 Bad Request"
+2026-05-25 12:24:08.889 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: POST http://testserver/api/v1/resume/upload "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.890 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/c352228b-d7f0-461a-8b22-dbf80ce7b249 "HTTP/1.1 200 OK"
+2026-05-25 12:24:08.892 | INFO     | httpx._client:_send_single_request:1025 - HTTP Request: GET http://testserver/api/v1/resume/non-existent-uuid-string "HTTP/1.1 404 Not Found"
